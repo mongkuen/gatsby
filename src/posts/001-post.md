@@ -1,7 +1,7 @@
 ---
 title: "POST ONE"
 date: "2016-01-01"
-slug: "POST ONE"
+slug: "post-one"
 ---
 
-POST ONE
+POST ONE CONTENT
