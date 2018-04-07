@@ -31,6 +31,7 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
           }
         })
       })
+      resolve()
     })
   })
 };
