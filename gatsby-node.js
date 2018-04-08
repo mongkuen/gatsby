@@ -1,4 +1,5 @@
 const path = require('path')
+const createPaginatedPages = require('gatsby-paginate')
 
 exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
   const { createPage } = boundActionCreators
@@ -19,13 +20,25 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
     `)
     .then(({ data }) => {
       const markdownNodes = data.allFile.edges.reduce((acc, { node }) => {
-        return [...acc, node.children[0].id]
+        const nodeId = node.children[0].id
+        return [...acc, getNode(nodeId)]
       }, [])
-      markdownNodes.forEach((id) => {
-        const node = getNode(id)
+
+      const markdownEdges = markdownNodes.sort((a, b) => {
+        return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+      }).map((node) => ({ node }))
+
+      createPaginatedPages({
+        edges: markdownEdges,
+        createPage: createPage,
+        pageTemplate: './src/templates/posts/index.js',
+        pageLength: 1
+      })
+
+      markdownNodes.forEach((node) => {
         createPage({
           path: node.frontmatter.slug,
-          component: path.resolve('./src/templates/posts/index.js'),
+          component: path.resolve('./src/templates/post/index.js'),
           context: {
             slug: node.frontmatter.slug
           }
