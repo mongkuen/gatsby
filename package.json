@@ -13,13 +13,15 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.4.0",
     "gatsby": "^1.9.246",
     "gatsby-paginate": "^1.0.14",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-filesystem": "^1.5.29",
     "gatsby-transformer-remark": "^1.7.39",
-    "locus": "^2.0.1"
+    "locus": "^2.0.1",
+    "prettier": "^1.11.1"
   },
   "dependencies": {
     "gatsby-link": "^1.6.40",

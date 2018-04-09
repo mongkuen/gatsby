@@ -10,9 +10,9 @@ const NavLink = ({ index, pageCount }) => {
 
   return (
     <div>
-      {(notFirst && <Link to={previousUrl}>Previous Page</Link>)}
+      {notFirst && <Link to={previousUrl}>Previous Page</Link>}
       <br />
-      {(notLast && <Link to={nextUrl}>Next Page</Link>)}
+      {notLast && <Link to={nextUrl}>Next Page</Link>}
     </div>
   );
 };
