@@ -3,11 +3,13 @@
   "license": "MIT",
   "version": "1.0.0",
   "scripts": {
-    "start": "gatsby develop",
+    "start": "concurrently \"gatsby develop\" \"yarn run prettier-watch\" --kill-others",
     "build": "gatsby build",
-    "pretest": "eslint --ignore-path .gitignore ."
+    "lint": "eslint --ignore-path .gitignore .",
+    "prettier-watch": "onchange 'src/**/*.js' 'src/**/*.jsx' -- prettier --write {{changed}}"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb": "16.1.0",
     "eslint-loader": "^2.0.0",
@@ -21,6 +23,7 @@
     "gatsby-source-filesystem": "^1.5.29",
     "gatsby-transformer-remark": "^1.7.39",
     "locus": "^2.0.1",
+    "onchange": "^3.3.0",
     "prettier": "^1.11.1"
   },
   "dependencies": {
