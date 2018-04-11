@@ -45,7 +45,7 @@ const Posts = ({ pathContext }) => {
 
 Posts.propTypes = {
   pathContext: PropTypes.shape({
-    group: PropTypes.object,
+    group: PropTypes.array,
     index: PropTypes.number.isRequired,
     pageCount: PropTypes.number.isRequired,
   }).isRequired,

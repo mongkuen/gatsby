@@ -1,3 +1,6 @@
+const siteMetadata = require('./src/siteMetadata');
+// Favicons Generation: https://realfavicongenerator.net/
+
 module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
@@ -7,6 +10,29 @@ module.exports = {
       options: {
         name: 'posts',
         path: `${__dirname}/posts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: siteMetadata.siteName,
+        short_name: siteMetadata.siteName,
+        start_url: "/",
+        theme_color: siteMetadata.themeBrandColor,
+        background_color: siteMetadata.themeBrandColor,
+        display: "standalone",
+        icons: [
+          {
+            "src": "/favicons/android-chrome-192x192.png?v=XBzW5YKM2e",
+            "sizes": "192x192",
+            "type": "image/png"
+          },
+          {
+            "src": "/favicons/android-chrome-512x512.png?v=XBzW5YKM2e",
+            "sizes": "512x512",
+            "type": "image/png"
+          },
+        ]
       },
     },
   ],
