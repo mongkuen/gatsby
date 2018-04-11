@@ -60,5 +60,12 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
       loader: 'eslint-loader',
     });
   }
+  config.merge({
+    resolve: {
+      alias: {
+        'src': path.join(__dirname, 'src')
+      },
+    },
+  });
   return config;
 };
