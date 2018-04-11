@@ -5,4 +5,12 @@ slug: "post-three"
 lead: "post three lead"
 ---
 
-POST THREE CONTENT
+POST THREE CONTENT `cd ~/code` command
+
+```javascript
+function test () {
+  console.log('test')
+}
+```
+
+

@@ -1,10 +1,11 @@
 const path = require('path');
+const siteMetadata = require('./src/siteMetadata');
 const createPaginatedPages = require('gatsby-paginate');
 
 exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
-  return new Promise((resolve, reject) => {
+  return new Promise(resolve => {
     graphql(`
       {
         allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
@@ -24,16 +25,17 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
       }, []);
 
       const markdownEdges = markdownNodes
-        .sort((a, b) => {
-          return new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-        })
+        .sort(
+          (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date),
+        )
         .map(node => ({ node }));
 
       createPaginatedPages({
         edges: markdownEdges,
         createPage,
         pageTemplate: './src/templates/posts/index.jsx',
-        pageLength: 1,
+        pathPrefix: siteMetadata.postsPathPrefix,
+        pageLength: 2,
       });
 
       markdownNodes.forEach((node) => {

@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import { postsPathPrefix } from '../../siteMetadata';
 
 const NavLink = ({ index, pageCount }) => {
   const notFirst = index !== 1;
   const notLast = index !== pageCount;
-  const previousUrl = index - 1 === 1 ? '' : (index - 1).toString();
-  const nextUrl = (index + 1).toString();
+  const previousUrl =
+    index - 1 === 1
+      ? `/${postsPathPrefix}`
+      : `/${postsPathPrefix}/${(index - 1).toString()}`;
+  const nextUrl = `/${postsPathPrefix}/${(index + 1).toString()}`;
 
   return (
     <div>

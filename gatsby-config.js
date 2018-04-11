@@ -4,7 +4,16 @@ const siteMetadata = require('./src/siteMetadata');
 module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs',
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -17,22 +26,22 @@ module.exports = {
       options: {
         name: siteMetadata.siteName,
         short_name: siteMetadata.siteName,
-        start_url: "/",
+        start_url: '/',
         theme_color: siteMetadata.themeBrandColor,
         background_color: siteMetadata.themeBrandColor,
-        display: "standalone",
+        display: 'standalone',
         icons: [
           {
-            "src": "/favicons/android-chrome-192x192.png?v=XBzW5YKM2e",
-            "sizes": "192x192",
-            "type": "image/png"
+            src: '/favicons/android-chrome-192x192.png?v=XBzW5YKM2e',
+            sizes: '192x192',
+            type: 'image/png',
           },
           {
-            "src": "/favicons/android-chrome-512x512.png?v=XBzW5YKM2e",
-            "sizes": "512x512",
-            "type": "image/png"
+            src: '/favicons/android-chrome-512x512.png?v=XBzW5YKM2e',
+            sizes: '512x512',
+            type: 'image/png',
           },
-        ]
+        ],
       },
     },
   ],

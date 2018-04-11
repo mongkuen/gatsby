@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import 'tachyons';
 import { siteName, themeBrandColor } from '../siteMetadata';
 
+require('prismjs/themes/prism-tomorrow.css');
+
 const Title = styled.h1.attrs({
   className: 'red',
 })``;
