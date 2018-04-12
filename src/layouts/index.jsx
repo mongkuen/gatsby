@@ -4,15 +4,19 @@ import styled from 'styled-components';
 import 'tachyons';
 import FaviconHelmet from 'src/layouts/components/FaviconHelmet';
 import sun from 'src/images/sun.svg';
+import { themeBrandColor } from 'src/siteMetadata';
 
 require('prismjs/themes/prism-tomorrow.css');
+require('./styles.css');
 
 const Header = styled.div.attrs({
-  className: 'dib w-100 tc pa3',
-})``;
+  className: 'dib w-100 tc pa3 near-black f7',
+})`
+  background-color: ${themeBrandColor};
+`;
 
 const HeadingWrapper = styled.div.attrs({
-  className: 'flex justify-between items-center',
+  className: 'flex justify-around items-center',
 })``;
 
 const Sun = styled.img.attrs({
@@ -36,7 +40,7 @@ const BaseLayout = ({ children }) => (
         <Sun />
         <HeadingWrapper>
           <Heading>Work</Heading>
-          <Heading>About Me</Heading>
+          <Heading>Mong-Kuen</Heading>
           <Heading>Blog</Heading>
         </HeadingWrapper>
       </Header>
