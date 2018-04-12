@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {
   blue,
   green,
-  tan,
   yellow,
   red,
   white,
@@ -28,10 +27,8 @@ const HalfBlock = styled.div.attrs({
 `;
 
 const Title = styled.h1.attrs({
-  className: 'underline',
-})`
-  color: ${props => props.color || black};
-`;
+  className: 'underline light-gray o-70',
+})``;
 
 const IntroSub = styled.h3.attrs({
   className: 'near-white',
@@ -56,7 +53,7 @@ const Index = ({ pathContext }) => (
         <IntroHead>Tovi (Alexandria Project)</IntroHead>
       </TitleWrapper>
     </HalfBlock>
-    <HalfBlock backgroundColor={tan} borderColor={red}>
+    <HalfBlock backgroundColor={orange} borderColor={red}>
       <Title>&#8202; Mong-Kuen &#8202;</Title>
     </HalfBlock>
     <HalfBlock backgroundColor={yellow} borderColor={red}>

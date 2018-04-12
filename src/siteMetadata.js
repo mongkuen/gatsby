@@ -5,11 +5,13 @@ module.exports = {
   blue: '#4281a4',
   green: '#48a9a6',
   tan: '#e4dfda',
+  purple: '#938ae2',
   yellow: '#d4b483',
   red: '#c1666b',
   orange: '#ff9505',
   white: '#fdfdfd',
   black: '#111',
+  gray: '#d5d5d5',
   mediumScreen: '48em',
   largeScreen: '64em',
 };
