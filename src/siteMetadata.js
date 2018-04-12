@@ -10,4 +10,6 @@ module.exports = {
   orange: '#ff9505',
   white: '#fdfdfd',
   black: '#111',
+  mediumScreen: '48em',
+  largeScreen: '64em',
 };

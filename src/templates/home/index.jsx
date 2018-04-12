@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
   blue,
@@ -9,6 +10,7 @@ import {
   white,
   orange,
   black,
+  largeScreen,
 } from 'src/siteMetadata';
 
 const HalfBlock = styled.div.attrs({
@@ -16,6 +18,13 @@ const HalfBlock = styled.div.attrs({
 })`
   height: calc(50vh - 2.5rem);
   background-color: ${props => props.backgroundColor || white};
+  border-left: 12px solid ${props => props.borderColor || black};
+  padding-right: 12px;
+
+  @media (min-width: ${largeScreen}) {
+    border-left: none;
+    padding-right: 0;
+  }
 `;
 
 const Title = styled.h1.attrs({
@@ -33,41 +42,46 @@ const IntroHead = styled.h2.attrs({
 })``;
 
 const TitleWrapper = styled.div.attrs({
-  className: 'flex flex-column tc ma1',
+  className: 'flex flex-column tc ma3',
 })``;
 
-const Index = () => (
+const Index = ({ pathContext }) => (
   <div>
-    <HalfBlock backgroundColor={blue}>
+    <HalfBlock backgroundColor={blue} borderColor={orange}>
       <Title>&#8202; Work &#8202;</Title>
     </HalfBlock>
-    <HalfBlock backgroundColor={green}>
+    <HalfBlock backgroundColor={green} borderColor={orange}>
       <TitleWrapper>
         <IntroSub>Latest Work:</IntroSub>
         <IntroHead>Tovi (Alexandria Project)</IntroHead>
       </TitleWrapper>
     </HalfBlock>
-    <HalfBlock backgroundColor={tan}>
+    <HalfBlock backgroundColor={tan} borderColor={red}>
       <Title>&#8202; Mong-Kuen &#8202;</Title>
     </HalfBlock>
-    <HalfBlock backgroundColor={yellow}>
+    <HalfBlock backgroundColor={yellow} borderColor={red}>
       <TitleWrapper>
-        <IntroSub>About Me:</IntroSub>
+        <IntroSub>Who Am I:</IntroSub>
         <IntroHead>
-          Full-Stack Dev &middot; Part-Time Dog &middot; Code
+          Professional Developer &middot; Wannabe Designer &middot; Perpetual
+          Learner
         </IntroHead>
       </TitleWrapper>
     </HalfBlock>
-    <HalfBlock backgroundColor={red}>
+    <HalfBlock backgroundColor={red} borderColor={blue}>
       <Title>&#8202; Blog &#8202;</Title>
     </HalfBlock>
-    <HalfBlock backgroundColor={orange}>
+    <HalfBlock backgroundColor={orange} borderColor={blue}>
       <TitleWrapper>
         <IntroSub>Latest Post:</IntroSub>
-        <IntroHead>Some Blog Post Title</IntroHead>
+        <IntroHead>{pathContext.latestPost.node.frontmatter.title}</IntroHead>
       </TitleWrapper>
     </HalfBlock>
   </div>
 );
+
+Index.propTypes = {
+  pathContext: PropTypes.shape({}).isRequired,
+};
 
 export default Index;

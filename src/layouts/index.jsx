@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 import 'tachyons';
 import FaviconHelmet from 'src/layouts/components/FaviconHelmet';
 import sun from 'src/images/sun.svg';
-import { themeBrandColor } from 'src/siteMetadata';
+import { themeBrandColor, black } from 'src/siteMetadata';
 
 require('prismjs/themes/prism-tomorrow.css');
 require('./styles.css');
@@ -21,31 +22,53 @@ const HeadingWrapper = styled.div.attrs({
 
 const Sun = styled.img.attrs({
   src: sun,
-  className: 'w1 h1',
-})``;
+  className: 'w1 h1 transition-ease',
+})`
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  &:hover {
+    filter: invert(1) drop-shadow(0px 0px 1px #fff);
+    animation: spin 7s linear infinite;
+  }
+`;
 
 const Heading = styled.div.attrs({
-  className: '',
-})``;
+  className: 'transition-ease',
+})`
+  &:hover {
+    text-shadow: 0px 0px 0.1px ${black};
+  }
+`;
 
-const FlexColumn = styled.div.attrs({
-  className: 'flex flex-column',
-})``;
+const HeadingLink = ({ children, to }) => (
+  <Link to={to}>
+    <Heading>{children}</Heading>
+  </Link>
+);
+
+HeadingLink.defaultProps = { to: '/' };
+HeadingLink.propTypes = {
+  children: PropTypes.string.isRequired,
+  to: PropTypes.string,
+};
 
 const BaseLayout = ({ children }) => (
   <div>
     <FaviconHelmet />
-    <FlexColumn>
-      <Header>
+    <Header>
+      <Link to="/">
         <Sun />
-        <HeadingWrapper>
-          <Heading>Work</Heading>
-          <Heading>Mong-Kuen</Heading>
-          <Heading>Blog</Heading>
-        </HeadingWrapper>
-      </Header>
-      {children()}
-    </FlexColumn>
+      </Link>
+      <HeadingWrapper>
+        <HeadingLink>Work</HeadingLink>
+        <HeadingLink>Mong-Kuen</HeadingLink>
+        <HeadingLink to="posts">Blog</HeadingLink>
+      </HeadingWrapper>
+    </Header>
+    {children()}
   </div>
 );
 

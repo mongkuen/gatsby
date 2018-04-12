@@ -47,6 +47,15 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
           },
         });
       });
+
+      createPage({
+        path: '/',
+        component: path.resolve('./src/templates/home/index.jsx'),
+        context: {
+          latestPost: markdownEdges[0],
+        },
+      });
+
       resolve();
     });
   });
