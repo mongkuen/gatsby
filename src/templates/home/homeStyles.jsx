@@ -72,7 +72,7 @@ export const IntroWrapper = styled.div`
     text-align: right;
     padding-left: 1rem;
     padding-right: 6rem;
-    opacity: 0.5;
+    opacity: ${props => props.opacity || 0.6};
 
     &:hover {
       opacity: 1;

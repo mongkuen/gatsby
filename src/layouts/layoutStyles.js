@@ -3,12 +3,7 @@ import { media, transitionEase, rotate360, nearBlack } from 'src/styles';
 import { themeBrandColor } from 'src/siteMetadata';
 import sun from 'src/images/sun.svg';
 
-export const Main = styled.main`
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-`;
+export const Main = styled.main``;
 
 export const Sun = styled.img.attrs({
   src: sun,
@@ -71,7 +66,7 @@ export const Header = styled.div`
     width: 50%;
     background-color: inherit;
     text-align: right;
-    padding: 1rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
   `};
 `;
 

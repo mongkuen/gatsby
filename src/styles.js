@@ -21,6 +21,8 @@ export const nearBlack = '#111';
 
 // BREAKPOINTS
 const sizes = {
+  extra: 1824,
+  large: 1224,
   desktop: 992,
   tablet: 768,
   phoneLandscape: 576,

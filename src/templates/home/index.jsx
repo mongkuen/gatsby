@@ -42,7 +42,7 @@ const Index = ({ pathContext }) => (
         </Link>
       </HalfBlock>
       <HalfBlock backgroundColor={gray}>
-        <IntroWrapper>
+        <IntroWrapper opacity="1">
           <IntroSub>Who Am I:</IntroSub>
           <IntroHead>
             Professional Developer &middot; Wannabe Designer &middot;

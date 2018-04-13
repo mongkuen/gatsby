@@ -12,6 +12,7 @@ import {
 } from 'src/layouts/layoutStyles';
 
 require('prismjs/themes/prism-tomorrow.css');
+require('src/base.css');
 
 const HeadingLink = ({ children, to }) => (
   <Link to={to}>
