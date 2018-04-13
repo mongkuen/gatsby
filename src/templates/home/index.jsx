@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import FadeTransition from 'src/utils/FadeTransition';
 import {
   media,
   transitionEase,
@@ -70,7 +71,7 @@ const IntroWrapper = styled.div`
 `;
 
 const Index = ({ pathContext }) => (
-  <div>
+  <FadeTransition>
     <BlockGroup borderColor={blueLite}>
       <HalfBlock backgroundColor={blue} justify="center">
         <Link to="work">
@@ -113,7 +114,7 @@ const Index = ({ pathContext }) => (
         </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
-  </div>
+  </FadeTransition>
 );
 
 Index.propTypes = {
