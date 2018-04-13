@@ -4,23 +4,28 @@ import styled from 'styled-components';
 import {
   media,
   red,
-  orange,
-  yellow,
+  redLite,
   green,
+  greenLite,
   blue,
+  blueLite,
   nearWhite,
   lightGray,
+  gray,
   nearBlack,
 } from 'src/styles';
 
+const BlockGroup = styled.div`
+  border-left: 0.5rem solid ${props => props.borderColor};
+`;
+
 const HalfBlock = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: ${props => props.justify || 'initial'};
   align-items: center;
   height: calc(50vh - 2.5rem);
   background-color: ${props => props.backgroundColor || nearWhite};
-  border-left: 12px solid ${props => props.borderColor || nearBlack};
-  padding-right: 12px;
+  padding-right: 0.5rem;
 
   ${media.desktop`
     border-left: none;
@@ -40,48 +45,61 @@ const IntroSub = styled.h3`
 
 const IntroHead = styled.h2`
   color: ${nearBlack};
-  margin: none;
+  margin: 0;
 `;
 
 const TitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: center;
-  margin: 1rem;
+  padding: 0 1.5rem;
+
+  ${media.phoneLandscape`
+    padding: 0 4rem;
+  `};
+
+  ${media.tablet`
+    padding: 0 8rem;
+  `};
 `;
 
 const Index = ({ pathContext }) => (
   <div>
-    <HalfBlock backgroundColor={blue} borderColor={orange}>
-      <Title>&#8202; Work &#8202;</Title>
-    </HalfBlock>
-    <HalfBlock backgroundColor={green} borderColor={orange}>
-      <TitleWrapper>
-        <IntroSub>Latest Work:</IntroSub>
-        <IntroHead>Tovi (Alexandria Project)</IntroHead>
-      </TitleWrapper>
-    </HalfBlock>
-    <HalfBlock backgroundColor={orange} borderColor={red}>
-      <Title>&#8202; Mong-Kuen &#8202;</Title>
-    </HalfBlock>
-    <HalfBlock backgroundColor={yellow} borderColor={red}>
-      <TitleWrapper>
-        <IntroSub>Who Am I:</IntroSub>
-        <IntroHead>
-          Professional Developer &middot; Wannabe Designer &middot; Perpetual
-          Learner
-        </IntroHead>
-      </TitleWrapper>
-    </HalfBlock>
-    <HalfBlock backgroundColor={red} borderColor={blue}>
-      <Title>&#8202; Blog &#8202;</Title>
-    </HalfBlock>
-    <HalfBlock backgroundColor={orange} borderColor={blue}>
-      <TitleWrapper>
-        <IntroSub>Latest Post:</IntroSub>
-        <IntroHead>{pathContext.latestPost.node.frontmatter.title}</IntroHead>
-      </TitleWrapper>
-    </HalfBlock>
+    <BlockGroup borderColor={blueLite}>
+      <HalfBlock backgroundColor={blue} justify="center">
+        <Title>&#8202; Work &#8202;</Title>
+      </HalfBlock>
+      <HalfBlock backgroundColor={gray}>
+        <TitleWrapper>
+          <IntroSub>Latest Work:</IntroSub>
+          <IntroHead>Tovi (Alexandria Project)</IntroHead>
+        </TitleWrapper>
+      </HalfBlock>
+    </BlockGroup>
+    <BlockGroup borderColor={redLite}>
+      <HalfBlock backgroundColor={red} justify="center">
+        <Title>&#8202; Mong-Kuen &#8202;</Title>
+      </HalfBlock>
+      <HalfBlock backgroundColor={gray}>
+        <TitleWrapper>
+          <IntroSub>Who Am I:</IntroSub>
+          <IntroHead>
+            Professional Developer &middot; Wannabe Designer &middot; Perpetual
+            Learner
+          </IntroHead>
+        </TitleWrapper>
+      </HalfBlock>
+    </BlockGroup>
+    <BlockGroup borderColor={greenLite}>
+      <HalfBlock backgroundColor={green} justify="center">
+        <Title>&#8202; Blog &#8202;</Title>
+      </HalfBlock>
+      <HalfBlock backgroundColor={gray}>
+        <TitleWrapper>
+          <IntroSub>Latest Post:</IntroSub>
+          <IntroHead>{pathContext.latestPost.node.frontmatter.title}</IntroHead>
+        </TitleWrapper>
+      </HalfBlock>
+    </BlockGroup>
   </div>
 );
 
