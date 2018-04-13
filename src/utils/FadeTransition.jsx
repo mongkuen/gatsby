@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Transition from 'react-transition-group/Transition';
-
-const duration = 250;
+import { pageTrasitionEvent, pageTransitionTime } from 'src/siteMetadata';
 
 const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
+  transition: `opacity ${pageTransitionTime}ms ease-in-out`,
   opacity: 0,
 };
 
@@ -18,20 +17,32 @@ class FadeTransition extends React.Component {
   constructor(props) {
     super(props);
     this.setIn = this.setIn.bind(this);
+    this.listenerHandler = this.listenerHandler.bind(this);
     this.state = { in: false };
   }
 
   componentDidMount() {
-    this.setIn();
+    this.setIn(true);
+    global.window.addEventListener(pageTrasitionEvent, this.listenerHandler);
   }
 
-  setIn() {
-    this.setState({ in: true });
+  componentWillUnmount() {
+    global.window.removeEventListener(pageTrasitionEvent, this.listenerHandler);
+  }
+
+  setIn(inProp) {
+    this.setState({ in: inProp });
+  }
+
+  listenerHandler(event) {
+    const currentPath = global.window.location.pathname;
+    const nextPath = event.detail.pathname;
+    if (currentPath !== nextPath) this.setIn(false);
   }
 
   render() {
     return (
-      <Transition in={this.state.in} timeout={duration}>
+      <Transition in={this.state.in} timeout={pageTransitionTime}>
         {state => (
           <div
             style={{

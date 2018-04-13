@@ -20,6 +20,10 @@ import {
 
 const BlockGroup = styled.div`
   border-left: 0.5rem solid ${props => props.borderColor};
+
+  ${media.desktop`
+    border-left: none;
+  `};
 `;
 
 const HalfBlock = styled.div`
@@ -31,7 +35,6 @@ const HalfBlock = styled.div`
   padding-right: 0.5rem;
 
   ${media.desktop`
-    border-left: none;
     padding-right: 0;
   `};
 `;
