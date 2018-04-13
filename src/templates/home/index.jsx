@@ -2,45 +2,53 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
-  blue,
-  green,
-  yellow,
+  media,
   red,
-  white,
   orange,
-  black,
-  largeScreen,
-} from 'src/siteMetadata';
+  yellow,
+  green,
+  blue,
+  nearWhite,
+  lightGray,
+  nearBlack,
+} from 'src/styles';
 
-const HalfBlock = styled.div.attrs({
-  className: 'flex justify-center items-center',
-})`
+const HalfBlock = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: calc(50vh - 2.5rem);
-  background-color: ${props => props.backgroundColor || white};
-  border-left: 12px solid ${props => props.borderColor || black};
+  background-color: ${props => props.backgroundColor || nearWhite};
+  border-left: 12px solid ${props => props.borderColor || nearBlack};
   padding-right: 12px;
 
-  @media (min-width: ${largeScreen}) {
+  ${media.desktop`
     border-left: none;
     padding-right: 0;
-  }
+  `};
 `;
 
-const Title = styled.h1.attrs({
-  className: 'underline light-gray o-70',
-})``;
+const Title = styled.h1`
+  text-decoration: underline;
+  opacity: 70%;
+  color: ${lightGray};
+`;
 
-const IntroSub = styled.h3.attrs({
-  className: 'near-white',
-})``;
+const IntroSub = styled.h3`
+  color: ${nearWhite};
+`;
 
-const IntroHead = styled.h2.attrs({
-  className: 'near-black ma0',
-})``;
+const IntroHead = styled.h2`
+  color: ${nearBlack};
+  margin: none;
+`;
 
-const TitleWrapper = styled.div.attrs({
-  className: 'flex flex-column tc ma3',
-})``;
+const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+`;
 
 const Index = ({ pathContext }) => (
   <div>

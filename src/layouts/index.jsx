@@ -2,44 +2,52 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
-import 'tachyons';
 import FaviconHelmet from 'src/layouts/components/FaviconHelmet';
 import sun from 'src/images/sun.svg';
-import { themeBrandColor, black } from 'src/siteMetadata';
+import { transitionEase, rotate360, nearBlack } from 'src/styles';
+import { themeBrandColor } from 'src/siteMetadata';
 
 require('prismjs/themes/prism-tomorrow.css');
-require('./styles.css');
 
-const Header = styled.div.attrs({
-  className: 'dib w-100 tc pa3 near-black f7',
-})`
+const Main = styled.main`
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`;
+
+const Header = styled.div`
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: ${nearBlack};
+  font-size: 0.75rem;
+  padding: 1rem;
   background-color: ${themeBrandColor};
 `;
 
-const HeadingWrapper = styled.div.attrs({
-  className: 'flex justify-around items-center',
-})``;
+const HeadingWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`;
 
-const Sun = styled.img.attrs({
-  src: sun,
-  className: 'w1 h1 transition-ease',
-})`
-  @keyframes spin {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+const Sun = styled.img`
+  width: 1rem;
+  height: 1rem;
+  ${transitionEase};
+
   &:hover {
     filter: invert(1) drop-shadow(0px 0px 1px #fff);
-    animation: spin 7s linear infinite;
+    animation: ${rotate360} 7s linear infinite;
   }
 `;
 
-const Heading = styled.div.attrs({
-  className: 'transition-ease',
-})`
+const Heading = styled.div`
+  ${transitionEase};
+
   &:hover {
-    text-shadow: 0px 0px 0.1px ${black};
+    text-shadow: 0px 0px 0.1px ${nearBlack};
   }
 `;
 
@@ -56,11 +64,11 @@ HeadingLink.propTypes = {
 };
 
 const BaseLayout = ({ children }) => (
-  <div>
+  <Main>
     <FaviconHelmet />
     <Header>
       <Link to="/">
-        <Sun />
+        <Sun src={sun} />
       </Link>
       <HeadingWrapper>
         <HeadingLink>Work</HeadingLink>
@@ -69,7 +77,7 @@ const BaseLayout = ({ children }) => (
       </HeadingWrapper>
     </Header>
     {children()}
-  </div>
+  </Main>
 );
 
 BaseLayout.propTypes = {
