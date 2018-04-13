@@ -71,8 +71,8 @@ const BaseLayout = ({ children }) => (
         <Sun src={sun} />
       </Link>
       <HeadingWrapper>
-        <HeadingLink>Work</HeadingLink>
-        <HeadingLink>Mong-Kuen</HeadingLink>
+        <HeadingLink to="work">Work</HeadingLink>
+        <HeadingLink to="me">Mong-Kuen</HeadingLink>
         <HeadingLink to="posts">Blog</HeadingLink>
       </HeadingWrapper>
     </Header>

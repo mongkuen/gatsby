@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
 import styled from 'styled-components';
 import {
   media,
+  transitionEase,
   red,
   redLite,
   green,
@@ -35,8 +37,13 @@ const HalfBlock = styled.div`
 
 const Title = styled.h1`
   text-decoration: underline;
-  opacity: 70%;
+  opacity: 0.8;
   color: ${lightGray};
+  ${transitionEase};
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const IntroSub = styled.h3`
@@ -48,7 +55,7 @@ const IntroHead = styled.h2`
   margin: 0;
 `;
 
-const TitleWrapper = styled.div`
+const IntroWrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem;
@@ -66,38 +73,44 @@ const Index = ({ pathContext }) => (
   <div>
     <BlockGroup borderColor={blueLite}>
       <HalfBlock backgroundColor={blue} justify="center">
-        <Title>&#8202; Work &#8202;</Title>
+        <Link to="work">
+          <Title>&#8202; Work &#8202;</Title>
+        </Link>
       </HalfBlock>
       <HalfBlock backgroundColor={gray}>
-        <TitleWrapper>
+        <IntroWrapper>
           <IntroSub>Latest Work:</IntroSub>
           <IntroHead>Tovi (Alexandria Project)</IntroHead>
-        </TitleWrapper>
+        </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
     <BlockGroup borderColor={redLite}>
       <HalfBlock backgroundColor={red} justify="center">
-        <Title>&#8202; Mong-Kuen &#8202;</Title>
+        <Link to="me">
+          <Title>&#8202; Mong-Kuen &#8202;</Title>
+        </Link>
       </HalfBlock>
       <HalfBlock backgroundColor={gray}>
-        <TitleWrapper>
+        <IntroWrapper>
           <IntroSub>Who Am I:</IntroSub>
           <IntroHead>
             Professional Developer &middot; Wannabe Designer &middot; Perpetual
             Learner
           </IntroHead>
-        </TitleWrapper>
+        </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
     <BlockGroup borderColor={greenLite}>
       <HalfBlock backgroundColor={green} justify="center">
-        <Title>&#8202; Blog &#8202;</Title>
+        <Link to="posts">
+          <Title>&#8202; Blog &#8202;</Title>
+        </Link>
       </HalfBlock>
       <HalfBlock backgroundColor={gray}>
-        <TitleWrapper>
+        <IntroWrapper>
           <IntroSub>Latest Post:</IntroSub>
           <IntroHead>{pathContext.latestPost.node.frontmatter.title}</IntroHead>
-        </TitleWrapper>
+        </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
   </div>
