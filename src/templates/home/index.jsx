@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { navigateTo } from 'gatsby-link';
+import Link from 'gatsby-link';
 import FadeTransition from 'src/utils/FadeTransition';
 import {
   red,
@@ -16,6 +16,7 @@ import {
   HalfBlock,
   PictureBlock,
   Title,
+  Intro,
   IntroSub,
   IntroHead,
   IntroWrapper,
@@ -27,59 +28,75 @@ import js from 'src/images/js.png';
 const Index = ({ pathContext }) => (
   <FadeTransition>
     <BlockGroup borderColor={blue}>
-      <PictureBlock
-        backgroundColor={blueDark}
-        justify="center"
-        image={licor}
-        imageSize="65%"
-        hoverSize="70%"
-        onClick={() => navigateTo('/work')}
-      >
-        <Title>&#8202; Work &#8202;</Title>
-      </PictureBlock>
+      <Link to="/work" style={{ width: '50%' }}>
+        <PictureBlock
+          backgroundColor={blueDark}
+          justify="center"
+          image={licor}
+          imageSize="65%"
+          hoverSize="70%"
+          width="100%"
+        >
+          <Title>&#8202; Work &#8202;</Title>
+        </PictureBlock>
+      </Link>
       <HalfBlock backgroundColor={gray}>
         <IntroWrapper padding="padding-top: 6.5rem;">
-          <IntroSub>Latest Work:</IntroSub>
-          <IntroHead>Tovi (Alexandria Project)</IntroHead>
+          <Link to="/">
+            <Intro>
+              <IntroSub>Latest Work:</IntroSub>
+              <IntroHead>Tovi (Alexandria Project)</IntroHead>
+            </Intro>
+          </Link>
         </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
     <BlockGroup borderColor={red}>
-      <PictureBlock
-        backgroundColor={redDark}
-        justify="center"
-        image={profile}
-        imageSize="auto 100%"
-        hoverSize="auto 105%"
-        onClick={() => navigateTo('/me')}
-      >
-        <Title>&#8202; Mong-Kuen &#8202;</Title>
-      </PictureBlock>
+      <Link to="/me" style={{ width: '50%' }}>
+        <PictureBlock
+          backgroundColor={redDark}
+          justify="center"
+          image={profile}
+          imageSize="auto 100%"
+          hoverSize="auto 105%"
+          width="100%"
+        >
+          <Title>&#8202; Mong-Kuen &#8202;</Title>
+        </PictureBlock>
+      </Link>
       <HalfBlock backgroundColor={gray}>
         <IntroWrapper opacity="1">
           <IntroSub>Who Am I:</IntroSub>
           <IntroHead>
-            Full-Stack Dev &middot; Frontend Obsessed &middot; Perpetually
-            Inquisitive
+            Full-Stack Dev &middot; Frontend Obsessed &middot; Currently in
+            Silicon Prairie
           </IntroHead>
         </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
     <BlockGroup borderColor={green}>
-      <PictureBlock
-        backgroundColor={greenDark}
-        justify="center"
-        image={js}
-        imageSize="auto 75%"
-        hoverSize="auto 80%"
-        onClick={() => navigateTo('/posts')}
-      >
-        <Title>&#8202; Blog &#8202;</Title>
-      </PictureBlock>
+      <Link to="/posts" style={{ width: '50%' }}>
+        <PictureBlock
+          backgroundColor={greenDark}
+          justify="center"
+          image={js}
+          imageSize="auto 75%"
+          hoverSize="auto 80%"
+          width="100%"
+        >
+          <Title>&#8202; Blog &#8202;</Title>
+        </PictureBlock>
+      </Link>
       <HalfBlock backgroundColor={gray}>
         <IntroWrapper padding="padding-bottom: 6.5rem;">
-          <IntroSub>Latest Post:</IntroSub>
-          <IntroHead>{pathContext.latestPost.node.frontmatter.title}</IntroHead>
+          <Link to={pathContext.latestPost.node.frontmatter.slug}>
+            <Intro>
+              <IntroSub>Latest Post:</IntroSub>
+              <IntroHead>
+                {pathContext.latestPost.node.frontmatter.title}
+              </IntroHead>
+            </Intro>
+          </Link>
         </IntroWrapper>
       </HalfBlock>
     </BlockGroup>

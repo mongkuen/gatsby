@@ -28,7 +28,7 @@ export const HalfBlock = styled.div`
   ${media.desktop`
     padding-right: 0;
     height: calc(33.33vh);
-    width: 50%;
+    width: ${props => props.width || '50%'};
   `};
 `;
 
@@ -40,7 +40,6 @@ export const Title = styled.h1`
 `;
 
 export const PictureBlock = HalfBlock.extend`
-  cursor: pointer;
   justify-content: ${props => props.justify || 'initial'};
 
   background-image: url('${props => props.image}');
@@ -55,6 +54,18 @@ export const PictureBlock = HalfBlock.extend`
       text-shadow: 0px 0px 3px #fff;
     }
   }
+`;
+
+export const Intro = styled.div`
+  ${media.desktop`
+    opacity: ${props => props.opacity || 0.5};
+    ${transitionEase};
+
+    &:hover {
+      opacity: 1;
+      text-shadow: 0px 0px 2px #fff;
+    }
+  `};
 `;
 
 export const IntroSub = styled.h3`
@@ -87,10 +98,5 @@ export const IntroWrapper = styled.div`
     text-align: right;
     padding-left: 1rem;
     padding-right: 6rem;
-    opacity: ${props => props.opacity || 0.5};
-
-    &:hover {
-      opacity: 1;
-    }
   `};
 `;
