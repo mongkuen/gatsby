@@ -56,6 +56,7 @@ export const Header = styled.div`
   font-size: 0.75rem;
   padding: 1rem;
   background-color: ${themeBrandColor};
+  z-index: 1;
 
   ${media.desktop`
     display: flex;

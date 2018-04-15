@@ -19,11 +19,11 @@ export const BlockGroup = styled.div`
 
 export const HalfBlock = styled.div`
   display: flex;
-  justify-content: ${props => props.justify || 'initial'};
   align-items: center;
   height: calc(50vh - 2.5rem);
   background-color: ${props => props.backgroundColor || nearWhite};
   padding-right: 0.5rem;
+  ${transitionEase};
 
   ${media.desktop`
     padding-right: 0;
@@ -37,14 +37,29 @@ export const Title = styled.h1`
   opacity: 0.8;
   color: ${lightGray};
   ${transitionEase};
+`;
+
+export const PictureBlock = HalfBlock.extend`
+  cursor: pointer;
+  justify-content: ${props => props.justify || 'initial'};
+
+  background-image: url('${props => props.image}');
+  background-size: ${props => props.imageSize || 'auto'};
+  background-repeat: no-repeat;
+  background-position: 50%;
 
   &:hover {
-    opacity: 1;
+    background-size: ${props => props.hoverSize || 'auto'};
+    ${Title} {
+      opacity: 1;
+      text-shadow: 0px 0px 3px #fff;
+    }
   }
 `;
 
 export const IntroSub = styled.h3`
   color: ${nearWhite};
+  margin-bottom: 0rem;
 `;
 
 export const IntroHead = styled.h2`
@@ -72,7 +87,7 @@ export const IntroWrapper = styled.div`
     text-align: right;
     padding-left: 1rem;
     padding-right: 6rem;
-    opacity: ${props => props.opacity || 0.6};
+    opacity: ${props => props.opacity || 0.5};
 
     &:hover {
       opacity: 1;

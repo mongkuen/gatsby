@@ -5,12 +5,12 @@ a {
 
 @media (min-width: 76em) {
   html {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: 114em) {
   html {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
