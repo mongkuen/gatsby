@@ -10,6 +10,7 @@ export const Sun = styled.img.attrs({
 })`
   width: 1rem;
   height: 1rem;
+  margin-bottom: 0;
   ${transitionEase};
 
   &:hover {
@@ -18,7 +19,6 @@ export const Sun = styled.img.attrs({
   }
 
   ${media.desktop`
-    margin-bottom: 0;
     width: 4rem;
     height: 4rem;
 
@@ -56,6 +56,9 @@ export const Header = styled.div`
   font-size: 0.75rem;
   padding: 1rem;
   background-color: ${themeBrandColor};
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
   z-index: 1;
 
   ${media.desktop`
@@ -65,9 +68,10 @@ export const Header = styled.div`
 
     position: fixed;
     width: 50%;
-    background-color: inherit;
+    background-color: initial;
     text-align: right;
     padding: 2rem 2rem 0 2rem;
+    box-shadow: initial;
   `};
 `;
 

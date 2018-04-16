@@ -20,7 +20,7 @@ export const BlockGroup = styled.div`
 export const HalfBlock = styled.div`
   display: flex;
   align-items: center;
-  height: calc(50vh - 2.5rem);
+  height: calc(50vh - 2rem);
   background-color: ${props => props.backgroundColor || nearWhite};
   padding-right: 0.5rem;
   ${transitionEase};
