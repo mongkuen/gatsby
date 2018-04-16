@@ -1,0 +1,16 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 76em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 114em) {
+  html {
+    font-size: 24px;
+  }
+}

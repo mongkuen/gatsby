@@ -38,7 +38,7 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
         pageLength: 2,
       });
 
-      markdownNodes.forEach((node) => {
+      markdownNodes.forEach(node => {
         createPage({
           path: node.frontmatter.slug,
           component: path.resolve('./src/templates/post/index.jsx'),
@@ -47,6 +47,15 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
           },
         });
       });
+
+      createPage({
+        path: '/',
+        component: path.resolve('./src/templates/home/index.jsx'),
+        context: {
+          latestPost: markdownEdges[0],
+        },
+      });
+
       resolve();
     });
   });
@@ -63,7 +72,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   config.merge({
     resolve: {
       alias: {
-        'src': path.join(__dirname, 'src')
+        src: path.join(__dirname, 'src'),
       },
     },
   });

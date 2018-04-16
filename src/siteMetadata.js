@@ -1,5 +1,7 @@
 module.exports = {
   siteName: 'Mong-Kuen',
-  themeBrandColor: '#ffc40d',
   postsPathPrefix: 'posts',
+  themeBrandColor: '#ffc40d',
+  pageTrasitionEvent: 'history::exiting',
+  pageTransitionTime: 250,
 };
