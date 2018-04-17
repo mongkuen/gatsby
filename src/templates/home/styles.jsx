@@ -18,6 +18,7 @@ export const BlockGroup = styled.div`
 `;
 
 export const HalfBlock = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   height: calc(50vh - 2rem);
@@ -40,6 +41,7 @@ export const Title = styled.h1`
 `;
 
 export const PictureBlock = HalfBlock.extend`
+  z-index: 1;
   justify-content: ${props => props.justify || 'initial'};
 
   background-image: url('${props => props.image}');
@@ -98,5 +100,20 @@ export const IntroWrapper = styled.div`
     text-align: right;
     padding-left: 1rem;
     padding-right: 6rem;
+  `};
+`;
+
+export const Caret = styled.div`
+  width: 3rem;
+  height: 3rem;
+  background-color: ${props => props.backgroundColor};
+  transform: rotate(45deg);
+  position: absolute;
+  top: -1.5rem;
+  right: calc(50% - 1.5rem);
+  z-index: 0;
+
+  ${media.desktop`
+    display: none;
   `};
 `;

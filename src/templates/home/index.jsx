@@ -20,6 +20,7 @@ import {
   IntroSub,
   IntroHead,
   IntroWrapper,
+  Caret,
 } from 'src/templates/home/styles';
 import profile from 'src/images/profile.png';
 import licor from 'src/images/licor.png';
@@ -41,6 +42,7 @@ const Index = ({ pathContext }) => (
         </PictureBlock>
       </Link>
       <HalfBlock backgroundColor={gray}>
+        <Caret backgroundColor={blueDark} />
         <IntroWrapper padding="padding-top: 6.5rem;">
           <Link to="/">
             <Intro>
@@ -65,6 +67,7 @@ const Index = ({ pathContext }) => (
         </PictureBlock>
       </Link>
       <HalfBlock backgroundColor={gray}>
+        <Caret backgroundColor={redDark} />
         <IntroWrapper opacity="1">
           <IntroSub>Who Am I:</IntroSub>
           <IntroHead>
@@ -88,6 +91,7 @@ const Index = ({ pathContext }) => (
         </PictureBlock>
       </Link>
       <HalfBlock backgroundColor={gray}>
+        <Caret backgroundColor={greenDark} />
         <IntroWrapper padding="padding-bottom: 6.5rem;">
           <Link to={pathContext.latestPost.node.frontmatter.slug}>
             <Intro>
