@@ -44,12 +44,12 @@ const Index = ({ pathContext }) => (
       <HalfBlock backgroundColor={gray}>
         <Caret backgroundColor={blueDark} />
         <IntroWrapper padding="padding-top: 6.5rem;">
-          <Link to="/">
-            <Intro>
-              <IntroSub>Latest Work:</IntroSub>
+          <Intro>
+            <IntroSub>Latest Work:</IntroSub>
+            <Link to="/work/licor">
               <IntroHead>Tovi (Alexandria Project)</IntroHead>
-            </Intro>
-          </Link>
+            </Link>
+          </Intro>
         </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
@@ -93,14 +93,14 @@ const Index = ({ pathContext }) => (
       <HalfBlock backgroundColor={gray}>
         <Caret backgroundColor={greenDark} />
         <IntroWrapper padding="padding-bottom: 6.5rem;">
-          <Link to={pathContext.latestPost.node.frontmatter.slug}>
-            <Intro>
-              <IntroSub>Latest Post:</IntroSub>
+          <Intro>
+            <IntroSub>Latest Post:</IntroSub>
+            <Link to={pathContext.latestPost.node.frontmatter.slug}>
               <IntroHead>
                 {pathContext.latestPost.node.frontmatter.title}
               </IntroHead>
-            </Intro>
-          </Link>
+            </Link>
+          </Intro>
         </IntroWrapper>
       </HalfBlock>
     </BlockGroup>

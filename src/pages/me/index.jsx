@@ -37,19 +37,19 @@ export default () => (
           <Description>
             My tech journey has taken me from startup{' '}
             <Highlight>
-              <Link to="/">cofounder</Link>
+              <Link to="/work/radial">cofounder</Link>
             </Highlight>, to non-profit{' '}
             <Highlight>
-              <Link to="/">developer</Link>
+              <Link to="/work/firespring#nonprofit">developer</Link>
             </Highlight>, and creative agency{' '}
             <Highlight>
-              <Link to="/">hacker</Link>
+              <Link to="/work/firespring">hacker</Link>
             </Highlight>.
           </Description>
           <Description>
             Today, I{"'"}m a{' '}
             <Highlight>
-              <Link to="/">software engineer lead</Link>
+              <Link to="/work/licor">software engineer lead</Link>
             </Highlight>, helping our team make data analysis awesome for
             climate scientists.
           </Description>

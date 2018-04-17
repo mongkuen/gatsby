@@ -36,9 +36,9 @@ const BaseLayout = ({ children }) => (
         </SunWrapper>
       </Link>
       <HeadingWrapper>
-        <HeadingLink to="work">Work</HeadingLink>
-        <HeadingLink to="me">Mong-Kuen</HeadingLink>
-        <HeadingLink to="posts">Blog</HeadingLink>
+        <HeadingLink to="/work">Work</HeadingLink>
+        <HeadingLink to="/me">Mong-Kuen</HeadingLink>
+        <HeadingLink to="/posts">Blog</HeadingLink>
       </HeadingWrapper>
     </Header>
     {children()}

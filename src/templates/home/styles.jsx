@@ -86,6 +86,10 @@ export const IntroWrapper = styled.div`
   padding: 0 1.5rem;
   ${transitionEase};
 
+  a {
+    text-decoration: underline;
+  }
+
   ${media.phoneLandscape`
     padding: 0 4rem;
   `};
