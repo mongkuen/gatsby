@@ -9,7 +9,7 @@ import {
   Header,
   HeadingWrapper,
   Heading,
-} from 'src/layouts/layoutStyles';
+} from 'src/layouts/styles';
 
 require('prismjs/themes/prism-tomorrow.css');
 require('src/base.css');

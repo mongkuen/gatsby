@@ -20,7 +20,7 @@ import {
   IntroSub,
   IntroHead,
   IntroWrapper,
-} from 'src/templates/home/homeStyles';
+} from 'src/templates/home/styles';
 import profile from 'src/images/profile.png';
 import licor from 'src/images/licor.png';
 import js from 'src/images/js.png';
