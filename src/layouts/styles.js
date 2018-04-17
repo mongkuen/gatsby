@@ -59,7 +59,7 @@ export const Header = styled.div`
   position: sticky;
   top: 0;
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
-  z-index: 1;
+  z-index: 2;
 
   ${media.desktop`
     display: flex;
