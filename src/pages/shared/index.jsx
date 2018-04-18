@@ -6,7 +6,7 @@ import { Contact, Social } from './styles';
 /* eslint-disable import/prefer-default-export */
 export const ContactMe = () => (
   <Contact>
-    <h4>I{"'"}d &hearts; to hear from you.</h4>
+    <h4>I{"'"}d &hearts; to hear from you</h4>
     <p>
       <a href="mailto:mongkuen.sun@gmail.com">mongkuen.sun@gmail.com</a>
     </p>

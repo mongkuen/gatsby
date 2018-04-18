@@ -62,6 +62,7 @@ export const Intro = styled.h3`
   margin-bottom: 0rem;
   line-height: 1.35;
   text-align: center;
+  font-weight: 700;
 `;
 
 export const Caret = styled.div`
@@ -91,6 +92,7 @@ export const Description = Intro.extend`
   text-align: left;
   color: ${nearBlack};
   margin: 0.5rem 0;
+  font-weight: initial;
 `;
 
 export const Highlight = styled.span`

@@ -1,5 +1,11 @@
 import styled from 'styled-components';
-import { transitionEase, grayMedium, grayDark, nearWhite } from 'src/styles';
+import {
+  transitionEase,
+  media,
+  grayMedium,
+  grayDark,
+  nearWhite,
+} from 'src/styles';
 
 export const Contact = styled.div`
   background-color: ${grayDark};
@@ -37,4 +43,13 @@ export const Social = styled.div`
       opacity: 1;
     }
   }
+`;
+
+export const Anchor = styled.span`
+  position: absolute;
+  margin-top: -4rem;
+
+  ${media.desktop`
+    margin-top: initial;
+  `};
 `;
