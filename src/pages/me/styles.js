@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import colorProfile from 'src/images/colorProfile.jpg';
-import { media, transitionEase, gray, nearWhite, nearBlack } from 'src/styles';
+import {
+  media,
+  transitionEase,
+  gray,
+  grayMedium,
+  grayDark,
+  nearWhite,
+  nearBlack,
+} from 'src/styles';
 
 export const ProfilePicture = styled.img.attrs({
   src: colorProfile,
@@ -87,7 +95,7 @@ export const Description = Intro.extend`
 `;
 
 export const Highlight = styled.span`
-  color: #999;
+  color: ${grayMedium};
   text-decoration: underline;
   ${transitionEase};
 
@@ -97,14 +105,14 @@ export const Highlight = styled.span`
 `;
 
 export const Contact = styled.div`
-  background-color: #222;
+  background-color: ${grayDark};
   width: 100%;
   text-align: center;
   padding: 3.5rem 0;
-  color: #999;
+  color: ${grayMedium};
 
   h4 {
-    color: #999;
+    color: ${grayMedium};
   }
 
   a {

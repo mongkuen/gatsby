@@ -17,6 +17,8 @@ export const tan = '#e4dfda';
 export const nearWhite = '#fefefe';
 export const lightGray = '#eee';
 export const gray = '#d5d5d5';
+export const grayMedium = '#999';
+export const grayDark = '#222';
 export const nearBlack = '#111';
 
 // BREAKPOINTS
