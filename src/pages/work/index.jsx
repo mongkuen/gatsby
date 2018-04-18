@@ -2,7 +2,7 @@ import React from 'react';
 import FadeTransition from 'src/utils/FadeTransition';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import { grayMedium, grayDark } from 'src/styles';
+import { grayMedium, grayDark, nearBlack } from 'src/styles';
 import {
   assurity,
   firespring,
@@ -20,6 +20,12 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 46rem;
+`;
+
+const Title = styled.h2`
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid ${nearBlack};
 `;
 
 const Brands = styled.div`
@@ -41,9 +47,15 @@ const Brand = styled.img`
 
 export default () => (
   <FadeTransition>
-    <Link to="/work/licor">Licor</Link>
-    <Link to="/work/firespring">Firespring</Link>
-    <Link to="/work/radial">Radial</Link>
+    <Link to="/work/licor">
+      <Title>LICOR</Title>
+    </Link>
+    <Link to="/work/firespring">
+      <Title>FIRESPRING</Title>
+    </Link>
+    <Link to="/work/radial">
+      <Title>STARTING OUT</Title>
+    </Link>
     <Brands>
       <Container>
         <ByLine>The amazing brands and products I worked on:</ByLine>

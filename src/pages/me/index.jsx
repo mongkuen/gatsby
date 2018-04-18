@@ -1,9 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import FadeTransition from 'src/utils/FadeTransition';
-import LinkedIn from 'src/images/iconLinkedIn.png';
-import Instagram from 'src/images/iconInstagram.png';
 import { gray } from 'src/styles';
+import { ContactMe } from 'src/pages/shared';
 import {
   ProfilePicture,
   IntroWrapper,
@@ -14,8 +13,6 @@ import {
   Half,
   Description,
   Highlight,
-  Contact,
-  Social,
 } from './styles';
 
 export default () => (
@@ -54,28 +51,7 @@ export default () => (
             climate scientists.
           </Description>
         </IntroWrapper>
-        <Contact>
-          <h4>I{"'"}d &hearts; to hear from you.</h4>
-          <p>
-            <a href="mailto:mongkuen.sun@gmail.com">mongkuen.sun@gmail.com</a>
-          </p>
-          <Social>
-            <a
-              href="https://www.linkedin.com/in/mongkuensun/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={LinkedIn} alt="Linked In" />
-            </a>
-            <a
-              href="https://www.instagram.com/mongkuen/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={Instagram} alt="Instagram" />
-            </a>
-          </Social>
-        </Contact>
+        <ContactMe />
       </Half>
     </ProfileWrapper>
   </FadeTransition>
