@@ -26,10 +26,10 @@ HeadingLink.propTypes = {
   to: PropTypes.string,
 };
 
-const BaseLayout = ({ children }) => (
+const BaseLayout = ({ children, location }) => (
   <Main>
     <FaviconHelmet />
-    <Header>
+    <Header wide={location.pathname !== '/' && location.pathname !== '/me'}>
       <Link to="/">
         <SunWrapper>
           <Sun />
@@ -47,6 +47,7 @@ const BaseLayout = ({ children }) => (
 
 BaseLayout.propTypes = {
   children: PropTypes.func.isRequired,
+  location: PropTypes.shape({}).isRequired,
 };
 
 export default BaseLayout;

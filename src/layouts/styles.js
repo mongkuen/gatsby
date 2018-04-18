@@ -60,6 +60,7 @@ export const Header = styled.div`
   top: 0;
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
   z-index: 2;
+  ${transitionEase};
 
   ${media.desktop`
     display: flex;
@@ -68,6 +69,7 @@ export const Header = styled.div`
 
     position: fixed;
     width: 50%;
+    width: ${props => props.wide && '100%'};
     background-color: initial;
     text-align: right;
     padding: 2rem 2rem 0 2rem;
