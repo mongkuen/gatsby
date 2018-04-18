@@ -13,6 +13,9 @@ import {
 } from 'src/styles';
 import { ContactMe } from 'src/pages/shared';
 import frame from 'src/images/frame.png';
+import toviGif from 'src/images/work/tovi.gif';
+import assurityGif from 'src/images/work/assurity.gif';
+import radialGif from 'src/images/work/radial.gif';
 import {
   assurity,
   firespring,
@@ -106,16 +109,32 @@ const InvertButton = Button.extend`
   }
 `;
 
+const frameWidth = 16;
+
 const Frame = styled.img.attrs({
   src: frame,
 })`
-  width: 16rem;
+  width: ${frameWidth}rem;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  z-index: 2;
   clip: rect(0px, 1000rem, 8rem, 0px);
+`;
+
+const bezelWidth = 0.5;
+const FrameItem = styled.img`
+  margin-top: ${bezelWidth}rem;
+  width: ${frameWidth - bezelWidth}rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  clip: rect(0px, 1000rem, ${8 - bezelWidth}rem, 0px);
 `;
 
 export default () => (
@@ -142,6 +161,7 @@ export default () => (
         </Link>
       </Container>
       <Frame />
+      <FrameItem src={toviGif} alt="Tovi" />
     </Block>
     <Block>
       <Container>
@@ -165,6 +185,7 @@ export default () => (
         </Link>
       </Container>
       <Frame />
+      <FrameItem src={assurityGif} alt="Tovi" />
     </Block>
     <Block backgroundColor={gray}>
       <Container>
@@ -188,6 +209,7 @@ export default () => (
         </Link>
       </Container>
       <Frame />
+      <FrameItem src={radialGif} alt="Tovi" />
     </Block>
     <Brands>
       <Container>
