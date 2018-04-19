@@ -56,3 +56,9 @@ export const Anchor = styled.span`
 export const Footer = styled.div`
   background-color: ${grayDark};
 `;
+
+export const Container = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 46rem;
+`;

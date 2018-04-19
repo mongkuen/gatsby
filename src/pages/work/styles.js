@@ -8,19 +8,13 @@ import {
 } from 'src/styles';
 import frame from 'src/images/frame.png';
 
-const baseFrameSize = 8;
+const baseFrameSize = 8.5;
 const tabletFrameSize = 14;
 
 const baseFrameWidth = 16;
 const tabletFrameWidth = 25;
 
 const bezelWidth = 0.5;
-
-export const Container = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 46rem;
-`;
 
 export const Block = styled.div`
   background-color: ${props => props.backgroundColor};
@@ -130,5 +124,14 @@ export const FrameItem = styled.img`
   ${media.tablet`
     width: ${tabletFrameWidth - bezelWidth}rem;
     clip: rect(0px, 1000rem, ${tabletFrameSize - bezelWidth}rem, 0px);
+  `};
+`;
+
+export const FrameWrapper = styled.div`
+  background-color: ${props => props.backgroundColor};
+  height: ${baseFrameSize}rem;
+
+  ${media.tablet`
+    height: ${tabletFrameSize}rem;
   `};
 `;

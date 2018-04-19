@@ -3,10 +3,10 @@ import FadeTransition from 'src/utils/FadeTransition';
 import Link from 'gatsby-link';
 import { gray } from 'src/styles';
 import { ContactMe } from 'src/pages/shared';
-import { Footer } from 'src/pages/shared/styles';
-import toviGif from 'src/images/work/tovi.gif';
-import assurityGif from 'src/images/work/assurity.gif';
-import radialGif from 'src/images/work/radial.gif';
+import { Footer, Container } from 'src/pages/shared/styles';
+import qaqc from 'src/images/work/licor/qaqc.gif';
+import assurityGif from 'src/images/work/firespring/assurity.gif';
+import radialGif from 'src/images/work/starting/radial.gif';
 import {
   assurity,
   firespring,
@@ -20,7 +20,6 @@ import {
   yoganonymous,
 } from 'src/logos';
 import {
-  Container,
   Block,
   Description,
   DescriptionWrapper,
@@ -40,9 +39,7 @@ export default () => (
   <FadeTransition>
     <Block backgroundColor={gray}>
       <Container>
-        <Link to="/work/licor">
-          <Brand src={licor} />
-        </Link>
+        <Brand src={licor} />
         <DescriptionWrapper>
           <Description>
             Leading a small LI-COR team to create Tovi: an advanced data
@@ -60,13 +57,11 @@ export default () => (
         </Link>
       </Container>
       <Frame />
-      <FrameItem src={toviGif} alt="Tovi" />
+      <FrameItem src={qaqc} alt="Tovi" />
     </Block>
     <Block>
       <Container>
-        <Link to="/work/firespring">
-          <InvertBrand src={firespring} />
-        </Link>
+        <InvertBrand src={firespring} />
         <DescriptionWrapper>
           <Description>
             Developed web experiences at Firespring{"'"}s Creative department,
@@ -88,9 +83,7 @@ export default () => (
     </Block>
     <Block backgroundColor={gray}>
       <Container>
-        <Link to="/work/starting">
-          <Brand src={radial} />
-        </Link>
+        <Brand src={radial} />
         <DescriptionWrapper>
           <Description>
             Cofounded Radial Review, a startup simplifying employee review and
