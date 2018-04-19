@@ -3,7 +3,6 @@ import {
   media,
   transitionEase,
   grayMedium,
-  grayDark,
   nearWhite,
   nearBlack,
 } from 'src/styles';
@@ -44,7 +43,6 @@ export const DescriptionWrapper = styled.div`
 `;
 
 export const Brands = styled.div`
-  background-color: ${grayDark};
   text-align: center;
 `;
 

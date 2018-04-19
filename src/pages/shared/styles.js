@@ -8,7 +8,6 @@ import {
 } from 'src/styles';
 
 export const Contact = styled.div`
-  background-color: ${grayDark};
   width: 100%;
   text-align: center;
   padding: 3.5rem 0;
@@ -52,4 +51,8 @@ export const Anchor = styled.span`
   ${media.desktop`
     margin-top: initial;
   `};
+`;
+
+export const Footer = styled.div`
+  background-color: ${grayDark};
 `;
