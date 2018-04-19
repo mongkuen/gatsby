@@ -26,6 +26,7 @@ export const Block = styled.div`
   background-color: ${props => props.backgroundColor};
   padding: 2.5rem 1rem ${baseFrameSize}rem 1rem;
   text-align: center;
+  ${transitionEase};
 
   ${media.desktop`
     padding-top: ${desktopFrameSize - 4}rem;
@@ -106,6 +107,7 @@ export const Frame = styled.img.attrs({
   right: 0;
   z-index: 2;
   clip: rect(0px, 1000rem, ${baseFrameSize}rem, 0px);
+  ${transitionEase};
 
   ${media.desktop`
     width: ${desktopFrameWidth}rem;
@@ -123,6 +125,7 @@ export const FrameItem = styled.img`
   right: 0;
   z-index: 1;
   clip: rect(0px, 1000rem, ${baseFrameSize - bezelWidth}rem, 0px);
+  ${transitionEase};
 
   ${media.desktop`
     width: ${desktopFrameWidth - bezelWidth}rem;
