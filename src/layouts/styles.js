@@ -18,7 +18,7 @@ export const Sun = styled.img.attrs({
     animation: ${rotate360} 7s linear infinite;
   }
 
-  ${media.desktop`
+  ${media.tablet`
     width: 4rem;
     height: 4rem;
 
@@ -29,7 +29,7 @@ export const Sun = styled.img.attrs({
 `;
 
 export const SunWrapper = styled.div`
-  ${media.desktop`
+  ${media.tablet`
     background-color: ${themeBrandColor};
     line-height: 0;
     padding: 0.5rem;
@@ -43,7 +43,7 @@ export const Heading = styled.div`
     text-shadow: 0px 0px 0.1px ${nearBlack};
   }
 
-  ${media.desktop`
+  ${media.tablet`
     margin: 0.25rem 0;
   `};
 `;
@@ -62,7 +62,7 @@ export const Header = styled.div`
   z-index: 3;
   ${transitionEase};
 
-  ${media.desktop`
+  ${media.tablet`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +82,7 @@ export const HeadingWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  ${media.desktop`
+  ${media.tablet`
     display: block;
   `};
 `;

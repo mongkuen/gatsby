@@ -48,7 +48,7 @@ export const Anchor = styled.span`
   position: absolute;
   margin-top: -4rem;
 
-  ${media.desktop`
+  ${media.tablet`
     margin-top: initial;
   `};
 `;

@@ -20,7 +20,7 @@ export default () => (
   <FadeTransition>
     <ProfileWrapper>
       <Half>
-        <IntroWrapper background={gray} desktopHeight="100vh">
+        <IntroWrapper background={gray} tabletHeight="100vh">
           <ProfilePicture />
           <Greeting>Hi, I{"'"}m Mong.</Greeting>
           <Intro>
@@ -31,7 +31,7 @@ export default () => (
         </IntroWrapper>
       </Half>
       <Half>
-        <IntroWrapper desktopHeight="calc(100vh - 13rem)">
+        <IntroWrapper tabletHeight="calc(100vh - 13rem)">
           <Description>
             My tech journey has taken me from startup{' '}
             <Highlight>

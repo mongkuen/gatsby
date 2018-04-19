@@ -30,11 +30,12 @@ export const IntroWrapper = styled.div`
 
   ${media.tablet`
     min-height: 19rem;
+    padding: 2rem 3rem;
+    height: ${props => props.tabletHeight};
   `};
 
   ${media.desktop`
     padding: 2rem 5rem;
-    height: ${props => props.desktopHeight};
   `};
 `;
 
@@ -43,7 +44,7 @@ export const ProfileWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
-  ${media.desktop`
+  ${media.tablet`
     flex-direction: row;
   `};
 `;
@@ -73,7 +74,7 @@ export const Caret = styled.div`
   position: absolute;
   bottom: -1.5rem;
 
-  ${media.desktop`
+  ${media.tablet`
     width: 3rem;
     height: 3rem;
     right: -1.5rem;
@@ -83,7 +84,7 @@ export const Caret = styled.div`
 
 export const Half = styled.div`
   width: 100%;
-  ${media.desktop`
+  ${media.tablet`
     width: 50%
   `};
 `;

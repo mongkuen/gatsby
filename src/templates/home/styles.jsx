@@ -10,7 +10,7 @@ import {
 export const BlockGroup = styled.div`
   border-left: 0.5rem solid ${props => props.borderColor};
 
-  ${media.desktop`
+  ${media.tablet`
     border-left: none;
     display: flex;
     flex-direction: row-reverse;
@@ -26,7 +26,7 @@ export const HalfBlock = styled.div`
   padding-right: 0.5rem;
   ${transitionEase};
 
-  ${media.desktop`
+  ${media.tablet`
     padding-right: 0;
     height: calc(33.33vh);
     width: ${props => props.width || '50%'};
@@ -59,7 +59,7 @@ export const PictureBlock = HalfBlock.extend`
 `;
 
 export const Intro = styled.div`
-  ${media.desktop`
+  ${media.tablet`
     opacity: ${props => props.opacity || 0.5};
     ${transitionEase};
 
@@ -95,13 +95,14 @@ export const IntroWrapper = styled.div`
   `};
 
   ${media.tablet`
-    padding: 0 8rem;
-  `};
-
-  ${media.desktop`
     ${props => props.padding};
     width: 100%;
     text-align: right;
+    padding-left: 1rem;
+    padding-right: 3rem;
+  `};
+
+  ${media.desktop`
     padding-left: 1rem;
     padding-right: 6rem;
   `};
@@ -117,7 +118,7 @@ export const Caret = styled.div`
   right: calc(50% - 1.5rem);
   z-index: 0;
 
-  ${media.desktop`
+  ${media.tablet`
     display: none;
   `};
 `;

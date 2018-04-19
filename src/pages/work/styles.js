@@ -9,10 +9,10 @@ import {
 import frame from 'src/images/frame.png';
 
 const baseFrameSize = 8;
-const desktopFrameSize = 14;
+const tabletFrameSize = 14;
 
 const baseFrameWidth = 16;
-const desktopFrameWidth = 25;
+const tabletFrameWidth = 25;
 
 const bezelWidth = 0.5;
 
@@ -28,9 +28,9 @@ export const Block = styled.div`
   text-align: center;
   ${transitionEase};
 
-  ${media.desktop`
-    padding-top: ${desktopFrameSize - 4}rem;
-    padding-bottom: ${desktopFrameSize}rem;
+  ${media.tablet`
+    padding-top: ${tabletFrameSize - 4}rem;
+    padding-bottom: ${tabletFrameSize}rem;
   `};
 `;
 
@@ -109,9 +109,9 @@ export const Frame = styled.img.attrs({
   clip: rect(0px, 1000rem, ${baseFrameSize}rem, 0px);
   ${transitionEase};
 
-  ${media.desktop`
-    width: ${desktopFrameWidth}rem;
-    clip: rect(0px, 1000rem, ${desktopFrameSize}rem, 0px);
+  ${media.tablet`
+    width: ${tabletFrameWidth}rem;
+    clip: rect(0px, 1000rem, ${tabletFrameSize}rem, 0px);
   `};
 `;
 
@@ -127,8 +127,8 @@ export const FrameItem = styled.img`
   clip: rect(0px, 1000rem, ${baseFrameSize - bezelWidth}rem, 0px);
   ${transitionEase};
 
-  ${media.desktop`
-    width: ${desktopFrameWidth - bezelWidth}rem;
-    clip: rect(0px, 1000rem, ${desktopFrameSize - bezelWidth}rem, 0px);
+  ${media.tablet`
+    width: ${tabletFrameWidth - bezelWidth}rem;
+    clip: rect(0px, 1000rem, ${tabletFrameSize - bezelWidth}rem, 0px);
   `};
 `;

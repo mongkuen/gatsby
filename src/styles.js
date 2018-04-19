@@ -21,6 +21,10 @@ export const grayMedium = '#999';
 export const grayDark = '#222';
 export const nearBlack = '#111';
 
+export const radialBlue = '#7baed5';
+export const licorBlue = '#0074c8';
+export const fsOrange = '#f55930';
+
 // BREAKPOINTS
 const sizes = {
   extra: 1824,
