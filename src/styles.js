@@ -24,6 +24,7 @@ export const nearBlack = '#111';
 export const radialBlue = '#7baed5';
 export const licorBlue = '#0074c8';
 export const fsOrange = '#f55930';
+export const stbaldricksGreen = '#63883d';
 
 // BREAKPOINTS
 const sizes = {

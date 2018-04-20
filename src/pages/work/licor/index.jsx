@@ -37,7 +37,7 @@ export default () => (
         <div>
           <h4>
             From developing the inital Tovi prototype, to leading the team to
-            releas: I worked on every aspect from wireframes/design, technology
+            release: I worked on every aspect from wireframes/design, technology
             selection, frontend JS coding, and scientific Python API
             development.
           </h4>
