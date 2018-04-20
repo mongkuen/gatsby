@@ -2,32 +2,17 @@ import React from 'react';
 import FadeTransition from 'src/utils/FadeTransition';
 import Link from 'gatsby-link';
 import { gray } from 'src/styles';
-import { ContactMe } from 'src/pages/shared';
-import { Footer, Container } from 'src/pages/shared/styles';
+import { WorkFooter } from 'src/pages/work/shared';
+import { Container } from 'src/pages/shared/styles';
+import { firespring, licor, radial } from 'src/logos';
 import qaqc from 'src/images/work/licor/qaqc.gif';
 import assurityGif from 'src/images/work/firespring/assurity.gif';
 import radialGif from 'src/images/work/starting/radial.gif';
 import {
-  assurity,
-  firespring,
-  kohler,
-  licor,
-  oxford,
-  radial,
-  slgreen,
-  stbaldricks,
-  tovi,
-  yoganonymous,
-} from 'src/logos';
-import {
   Block,
   Description,
   DescriptionWrapper,
-  Brands,
-  BrandWrapper,
-  ByLine,
   Brand,
-  BrandSmall,
   InvertBrand,
   Button,
   InvertButton,
@@ -103,27 +88,6 @@ export default () => (
       <Frame />
       <FrameItem src={radialGif} alt="Tovi" />
     </Block>
-    <Footer>
-      <Brands>
-        <Container>
-          <BrandWrapper>
-            <ByLine>
-              The amazing brands and products I{"'"}ve worked with:
-            </ByLine>
-            <BrandSmall src={assurity} />
-            <BrandSmall src={firespring} />
-            <BrandSmall src={kohler} />
-            <BrandSmall src={licor} />
-            <BrandSmall src={oxford} />
-            <BrandSmall src={radial} />
-            <BrandSmall src={slgreen} />
-            <BrandSmall src={stbaldricks} />
-            <BrandSmall src={tovi} />
-            <BrandSmall src={yoganonymous} />
-          </BrandWrapper>
-        </Container>
-      </Brands>
-      <ContactMe />
-    </Footer>
+    <WorkFooter />
   </FadeTransition>
 );

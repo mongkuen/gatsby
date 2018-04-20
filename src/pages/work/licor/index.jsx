@@ -5,9 +5,7 @@ import { licor, tovi } from 'src/logos';
 import fingerprint from 'src/images/work/licor/fingerprints.gif';
 import qaqc from 'src/images/work/licor/qaqc.gif';
 import scatter from 'src/images/work/licor/scatter.gif';
-import { ContactMe } from 'src/pages/shared';
-import { Footer } from 'src/pages/shared/styles';
-import { Hero, WorkBlock, BlurbTech } from 'src/pages/work/workShared';
+import { Hero, WorkBlock, BlurbTech, WorkFooter } from 'src/pages/work/shared';
 
 export default () => (
   <FadeTransition>
@@ -105,8 +103,6 @@ export default () => (
       src={scatter}
       alt="Tovi scatter plotting"
     />
-    <Footer>
-      <ContactMe />
-    </Footer>
+    <WorkFooter />
   </FadeTransition>
 );

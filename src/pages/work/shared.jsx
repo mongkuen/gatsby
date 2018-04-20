@@ -2,8 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { media, lightGray, nearWhite } from 'src/styles';
-import { Container } from 'src/pages/shared/styles';
-import { Frame, FrameItem, FrameWrapper } from 'src/pages/work/styles';
+import { Footer, Container } from 'src/pages/shared/styles';
+import { ContactMe } from 'src/pages/shared';
+import {
+  assurity,
+  firespring,
+  gordmans,
+  kohler,
+  licor,
+  oxford,
+  radial,
+  slgreen,
+  stbaldricks,
+  tovi,
+  yoganonymous,
+} from 'src/logos';
+import {
+  Brands,
+  BrandWrapper,
+  ByLine,
+  BrandSmall,
+  Frame,
+  FrameItem,
+  FrameWrapper,
+} from 'src/pages/work/styles';
 
 const BlockBackground = styled.div`
   background-color: ${props => props.backgroundColor};
@@ -17,7 +39,7 @@ const BlockBrand = styled.img`
   margin-bottom: 2.5rem;
 `;
 
-const SmallBrand = styled.img`
+export const SmallBrand = styled.img`
   filter: saturate(0) brightness(0.2);
   margin: 0 auto 1rem auto;
   height: 2rem;
@@ -137,3 +159,27 @@ WorkBlock.defaultProps = {
   color: '',
   smallBrand: '',
 };
+
+export const WorkFooter = () => (
+  <Footer>
+    <Brands>
+      <Container>
+        <BrandWrapper>
+          <ByLine>The amazing brands and products I{"'"}ve worked with:</ByLine>
+          <BrandSmall src={assurity} />
+          <BrandSmall src={firespring} />
+          <BrandSmall src={gordmans} />
+          <BrandSmall src={kohler} />
+          <BrandSmall src={licor} />
+          <BrandSmall src={oxford} />
+          <BrandSmall src={radial} />
+          <BrandSmall src={slgreen} />
+          <BrandSmall src={stbaldricks} />
+          <BrandSmall src={tovi} />
+          <BrandSmall src={yoganonymous} />
+        </BrandWrapper>
+      </Container>
+    </Brands>
+    <ContactMe />
+  </Footer>
+);
