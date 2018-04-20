@@ -105,20 +105,21 @@ export default () => (
         <BlockLead>Software Development</BlockLead>
         <BlockBlurb color="initial">
           <h4>
-            As the initial Tovi prototype developer, I spearheaded
-            wireframes/design, technology selection, frontend JS coding, and
-            scientific Python API development.
+            From developing the inital Tovi prototype, to leading the team to
+            releas: I worked on every aspect from wireframes/design, technology
+            selection, frontend JS coding, and scientific Python API
+            development.
           </h4>
           <hr />
           <h4>A cross-platform desktop application, the stack consisted of:</h4>
           <BlurbTech>
-            JS/Vue &middot; Portable Python/Django &middot; Electron Shell
-            &middot; SQLite/NetCDF
+            JS/Vue Stack &middot; Portable Python/Django &middot; Electron
+            Wrapper &middot; SQLite/NetCDF
           </BlurbTech>
         </BlockBlurb>
       </Container>
     </Block>
-    <Caption>Climate Fingerprints Charts</Caption>
+    <Caption>Zero-Code Climate Fingerprinting</Caption>
     <FrameWrapper>
       <Frame />
       <FrameItem src={fingerprint} alt="Tovi" />
@@ -126,24 +127,26 @@ export default () => (
     <div style={{ backgroundColor: gray }}>
       <Block>
         <Container>
-          <BlockLead>Technical Challenges</BlockLead>
+          <BlockLead>Scientific Challenges</BlockLead>
           <BlockBlurb color="initial">
             <h4>
-              Requiring a cross-platform desktop application, the technology
-              stack consisted of:
+              Tovi saves scientists from programming pain – experienced from
+              data management, to aggregation, processing, formatting, graphing,
+              and exporting. Tovi replaces painful CSVs/Excel/custom scripting
+              with beautiful visuals, and graphically performs operations that
+              would{"'"}ve taken days or weeks.
             </h4>
             <hr />
             <h4>
-              Multi-year scientific datasets have hundreds of variables,
-              requiring NetCDF binary storage. Scientific reproducibility
-              requires immutable binaries that log every processing step.
-              Scientists can time-travel to revert or branch from any prior
-              step.
+              Multi-year/instrument datasets have hundreds of variables, so data
+              mutation creates a scientific reproducibility nightmare. Immutable
+              NetCDF data binaries log every processing step, letting scientists
+              time-travel, revert, modify, or branch from any prior step.
             </h4>
           </BlockBlurb>
         </Container>
       </Block>
-      <Caption>Easy Drag & Drop Data QA</Caption>
+      <Caption>Visual & Intuitive Data QA</Caption>
       <FrameWrapper>
         <Frame />
         <FrameItem src={qaqc} alt="Tovi" />
@@ -154,19 +157,25 @@ export default () => (
         <BlockLead>Leading the Team</BlockLead>
         <BlockBlurb color="initial">
           <h4>
-            As the initial Tovi prototype developer, I spearheaded
-            wireframes/design, technology selection, frontend JS coding, and
-            scientific Python API development.
+            After prototype market validation, 3 additional devs joined Tovi to
+            develop additional features. I accelerated project speed by
+            providing workflow knowledge, code familiarity, and code reviews.
           </h4>
           <hr />
           <h4>
-            Requiring a cross-platform desktop application, the technology stack
-            consisted of:
+            Since January 2018, I{"'"}ve led the team through 2 MVP versions,
+            with the team introducing features from NOAA climate data fetching,
+            geographical carbon footprint mapping, and automated data
+            gap-filling.
+          </h4>
+          <h4>
+            We proudly introduced Tovi at the European Geoscience Union April
+            {" '"}18 to hundreds of climate scientists worldwide.
           </h4>
         </BlockBlurb>
       </Container>
     </Block>
-    <Caption>Easily visualize data and relationships</Caption>
+    <Caption>Explore data and visualize relationships</Caption>
     <FrameWrapper>
       <Frame />
       <FrameItem src={scatter} alt="Tovi" />

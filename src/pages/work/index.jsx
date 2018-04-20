@@ -107,7 +107,9 @@ export default () => (
       <Brands>
         <Container>
           <BrandWrapper>
-            <ByLine>The amazing brands and products I worked on:</ByLine>
+            <ByLine>
+              The amazing brands and products I{"'"}ve worked with:
+            </ByLine>
             <BrandSmall src={assurity} />
             <BrandSmall src={firespring} />
             <BrandSmall src={kohler} />
