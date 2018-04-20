@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { media, lightGray, nearWhite } from 'src/styles';
 import { Footer, Container } from 'src/pages/shared/styles';
@@ -166,17 +167,39 @@ export const WorkFooter = () => (
       <Container>
         <BrandWrapper>
           <ByLine>The amazing brands and products I{"'"}ve worked with:</ByLine>
-          <BrandSmall src={assurity} />
-          <BrandSmall src={firespring} />
-          <BrandSmall src={gordmans} />
-          <BrandSmall src={kohler} />
-          <BrandSmall src={licor} />
-          <BrandSmall src={oxford} />
-          <BrandSmall src={radial} />
-          <BrandSmall src={slgreen} />
-          <BrandSmall src={stbaldricks} />
-          <BrandSmall src={tovi} />
-          <BrandSmall src={yoganonymous} />
+          <Link to="/work/firespring#assurity">
+            <BrandSmall src={assurity} />
+          </Link>
+          <Link to="/work/firespring#firespring">
+            <BrandSmall src={firespring} />
+          </Link>
+          <Link to="/work/firespring#gordmans">
+            <BrandSmall src={gordmans} />
+          </Link>
+          <Link to="/work/firespring#kohler">
+            <BrandSmall src={kohler} />
+          </Link>
+          <Link to="/work/licor#licor">
+            <BrandSmall src={licor} />
+          </Link>
+          <Link to="/work/firespring#oxford">
+            <BrandSmall src={oxford} />
+          </Link>
+          <Link to="/work/starting#radial">
+            <BrandSmall src={radial} />
+          </Link>
+          <Link to="/work/firespring#slgreen">
+            <BrandSmall src={slgreen} />
+          </Link>
+          <Link to="/work/starting#stbaldricks">
+            <BrandSmall src={stbaldricks} />
+          </Link>
+          <Link to="/work/licor#licor">
+            <BrandSmall src={tovi} />
+          </Link>
+          <Link to="/work/firespring#yoganonymous">
+            <BrandSmall src={yoganonymous} />
+          </Link>
         </BrandWrapper>
       </Container>
     </Brands>

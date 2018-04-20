@@ -1,5 +1,6 @@
 import React from 'react';
 import FadeTransition from 'src/utils/FadeTransition';
+import { Anchor } from 'src/pages/shared/styles';
 import { gray, fsOrange } from 'src/styles';
 import {
   assurity,
@@ -25,6 +26,7 @@ import {
 
 export default () => (
   <FadeTransition>
+    <Anchor id="firespring" />
     <Hero
       color={fsOrange}
       brand={firespring}
@@ -44,6 +46,7 @@ export default () => (
         </h4>
       }
     />
+    <Anchor id="gordmans" />
     <WorkBlock
       blockLead="Mapping America's Consumers"
       smallBrand={gordmans}
@@ -69,6 +72,7 @@ export default () => (
       src={gordmansGif}
       alt="Gordmans Map"
     />
+    <Anchor id="assurity" />
     <WorkBlock
       color={gray}
       smallBrand={assurity}
@@ -93,6 +97,7 @@ export default () => (
       src={assurityGif}
       alt="Assurity websites"
     />
+    <Anchor id="kohler" />
     <WorkBlock
       smallBrand={kohler}
       blockLead="Quickbooks and Content"
@@ -116,6 +121,8 @@ export default () => (
       src={kohlerGif}
       alt="Kohler website"
     />
+    <Anchor id="slgreen" />
+    <Anchor id="oxford" />
     <WorkBlock
       color={gray}
       blockLead="Real Estate from NYC to Ontario"
@@ -142,6 +149,7 @@ export default () => (
       src={slgreenPng}
       alt="SL Green website"
     />
+    <Anchor id="yoganonymous" />
     <WorkBlock
       smallBrand={yoganonymous}
       blockLead="Spreading Love and Yoga"

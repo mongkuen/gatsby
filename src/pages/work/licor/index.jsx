@@ -6,9 +6,11 @@ import fingerprint from 'src/images/work/licor/fingerprints.gif';
 import qaqc from 'src/images/work/licor/qaqc.gif';
 import scatter from 'src/images/work/licor/scatter.gif';
 import { Hero, WorkBlock, BlurbTech, WorkFooter } from 'src/pages/work/shared';
+import { Anchor } from 'src/pages/shared/styles';
 
 export default () => (
   <FadeTransition>
+    <Anchor id="licor" />
     <Hero
       color={licorBlue}
       brand={licor}

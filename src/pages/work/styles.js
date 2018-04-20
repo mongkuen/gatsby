@@ -58,7 +58,12 @@ export const Brand = styled.img`
 `;
 
 export const BrandSmall = Brand.extend`
+  opacity: 0.8;
   height: 1.5rem;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const InvertBrand = Brand.extend`
