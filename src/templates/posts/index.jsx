@@ -34,6 +34,11 @@ const AllPosts = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  a.post {
+    flex-grow: 1;
+    display: flex;
+  }
 `;
 
 const Post = styled.div`
@@ -72,11 +77,8 @@ const Posts = ({ pathContext }) => {
     <FadeTransition>
       <AllPosts>
         {group.map(({ node }) => (
-          <Link to={node.frontmatter.slug}>
-            <Post
-              key={node.id}
-              backgroundColor={node.frontmatter.backgroundColor}
-            >
+          <Link to={node.frontmatter.slug} className="post" key={node.id}>
+            <Post backgroundColor={node.frontmatter.backgroundColor}>
               <Container>
                 <PostTitle>{node.frontmatter.title}</PostTitle>
                 <PostDate>Date: {node.frontmatter.date}</PostDate>
