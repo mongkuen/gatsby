@@ -33,10 +33,10 @@ export default () => (
       blockBlurb={
         <div>
           <h4>
-            After graduating with a degree in Biochemical Forensic Science, I
-            cofounded Radial, entering the tech scene. I wore many hats, from
-            incorporation, to accounting/taxes, grant-writing, and customer
-            development.
+            Graduating UNL with Biochemical Forensic Science in 2013, I entered
+            technology after cofounding Radial. My roles ranged from
+            incorporation/legal, to product management, accounting/taxes,
+            wireframing, grant writing, and customer development.
           </h4>
           <hr />
           <h4>
@@ -48,7 +48,7 @@ export default () => (
           </BlurbTech>
         </div>
       }
-      caption="Radial Website (my first site!)"
+      caption="Radial's initial website"
       src={radialGif}
       alt="Radial website"
     />
@@ -62,13 +62,12 @@ export default () => (
           <h4>Web Application Engineer &middot; St. Baldricks Foundation</h4>
         </div>
       }
-      title="Building technology to join the fight against childhood cancer"
+      title="Building technology in the fight against childhood cancer"
       blurb={
         <h4>
-          As a self-taught developer, St. Baldricks was the perfect project to
-          make a visible impact on the world with technology. After 3 successful
-          months of internship, I was later onboarded as a full-stack developer
-          at Firespring Creative.
+          As a self-taught developer, St. Baldricks was a perfect start to make
+          a visible impact with technology. After 3 successful months at SBF, I
+          accepted the offer to join Firespring Creative.
         </h4>
       }
     />
@@ -78,17 +77,16 @@ export default () => (
       blockBlurb={
         <div>
           <h4>
-            Working full-time with the well-established SBF team was a great
-            introduction to a complex codebase. With SBF processing millions of
-            dollars of donations each year, the project demands attention to
-            detail, and teamwork to review and extend the codebase.
+            SBF presents a well-established team, with refined processed, and a
+            complex codebase. Millions of dollars of donations are processed
+            each year, from thousands of people and transactions.
           </h4>
           <hr />
           <h4>
-            As a legacy app transitioning to a newer architecture, the
-            application spans multiple languages/frameworks, with feature
-            upgrades demanded necessary to compete in the evolving non-profit
-            landscape.
+            I helped the team during their transition from a legacy PHP app to a
+            newer PHP API and Ruby frontend architecture. This meant traversing
+            multiple languages and frameworks to port/maintain old features,
+            while building new ones.
           </h4>
           <BlurbTech>
             PHP/Zend &middot; Ruby/Padrino &middot; SBF custom API/API libs

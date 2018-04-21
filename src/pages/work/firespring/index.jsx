@@ -41,8 +41,8 @@ export default () => (
         <h4>
           I worked with Firespring Creative{"'"}s diverse portfolio from
           real-estate, to insurance, retail, and digital marketing. Developer
-          flexibility and clear communication was key in satisfying different
-          project requirements on a deadline.
+          flexibility and clear communication was key to perfecting project
+          requirements on a deadline.
         </h4>
       }
     />
@@ -54,9 +54,9 @@ export default () => (
         <div>
           <h4>
             Using Ruby to help Gordmans scale a high-conversion print ad. Each
-            flyer is customized to direct the receiver to the nearest store.
-            With hundreds of thousands of consumers, scaling complications range
-            from API rate-limits, address sanitation, error handling, and
+            flyer is customized to direct receiver to the nearest store. With
+            hundreds of thousands of consumers, scaling complications range from
+            API rate-limits, to address sanitation, error handling, and
             optimizing concurrent request speeds.
           </h4>
           <hr />
@@ -87,8 +87,8 @@ export default () => (
           <hr />
           <h4>
             <span style={{ fontWeight: 700 }}>Assurity Annual Report:</span> A
-            beautiful web alternative compared to typical annual reports,
-            helping Assurity communicate effectively to their 2015 stakeholders.
+            beautiful web alternative to typical annual reports, that helps
+            Assurity communicate effectively to their 2015 stakeholders.
           </h4>
           <BlurbTech>Ruby/Middleman &middot; HAML/SCSS/JS</BlurbTech>
         </div>
@@ -104,15 +104,15 @@ export default () => (
       blockBlurb={
         <div>
           <h4>
-            A simple Ruby on Rails app that powers a CMS & Website – helping a
-            small Nebraskan business list their products and send notifications
-            to their clients.
+            A simple Ruby on Rails app that powers a CMS and website – helping a
+            small Nebraskan business list products and send client
+            notifications.
           </h4>
           <hr />
           <h4>
-            Kohler requested Quickbooks integration, which required my in-person
-            visits to set up Quickbooks sync, pushing inventory/sales
-            information securely to update the Rails website automatically.
+            Kohler requested Quickbooks integration, requiring on-site push
+            server setup. Quickbooks sync pushes inventory/sales information
+            securely to update the Rails website automatically.
           </h4>
           <BlurbTech>Ruby/Rails &middot; Quickbooks</BlurbTech>
         </div>
@@ -130,7 +130,7 @@ export default () => (
         <div>
           <SmallBrand src={slgreen} />
           <h4>
-            Developer for NYC{"'"}s largest commercial real-estate owner, SL
+            Developed for NYC{"'"}s largest commercial real-estate owner, SL
             Green. Rails CMS backend, with property showcase, corporate
             highlights, and tenant login/management.
           </h4>
@@ -139,8 +139,9 @@ export default () => (
           <SmallBrand src={oxford} />
           <h4>
             Helping Oxford Properties develop a beautiful mobile app pitchdeck.
-            Ruby/Rails CMS hosts property information that can be downloaded to
-            an Angular app wrapped by Cordova for iOS/Android/Windows.
+            Ruby/Rails CMS hosts property information that is downloaded to an
+            offline-capable Angular app wrapped by Cordova webview for
+            iOS/Android/Windows.
           </h4>
           <BlurbTech>Cordova &middot; JS/Angular &middot; Ruby/Rails</BlurbTech>
         </div>
@@ -156,15 +157,15 @@ export default () => (
       blockBlurb={
         <div>
           <h4>
-            Yoganonymous was a lifestyle brand whose content reached thousands
-            of yoga practitioners, and features a platform for hundreds of yoga
+            Yoganonymous was a lifestyle and content brand, reaching thousands
+            of yoga practitioners. Site featured a platform for hundreds of yoga
             teachers/studios/events to connect with practitioners.
           </h4>
           <hr />
           <h4>
-            Our Rails app made it easy for editors to process hundreds of post
+            Our Rails app made it easy for editors to process hundreds of blog
             submissions, drafts, edits, and publishes. The growth of the
-            Yoganonymous and the community led to a successful acquisition by
+            Yoganonymous and the community led to its successful acquisition by
             Wanderlust Media.
           </h4>
           <BlurbTech>
