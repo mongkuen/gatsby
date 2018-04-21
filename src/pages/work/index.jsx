@@ -18,7 +18,7 @@ import {
   InvertButton,
   Frame,
   FrameItem,
-} from './styles';
+} from 'src/pages/work/styles';
 
 export default () => (
   <FadeTransition>

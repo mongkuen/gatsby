@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { media, lightGray, nearWhite } from 'src/styles';
-import { Footer, Container } from 'src/pages/shared';
+import { Footer, Container, SmallBrand } from 'src/pages/shared';
 import ContactMe from 'src/pages/shared/ContactMe';
 import {
   assurity,
@@ -39,13 +39,6 @@ const BlockBrand = styled.img`
   width: 10rem;
   margin-bottom: 2.5rem;
   max-height: 4rem;
-`;
-
-export const SmallBrand = styled.img`
-  filter: saturate(0) brightness(0.2);
-  margin: 0 auto 1rem auto;
-  height: 2rem;
-  display: block;
 `;
 
 const Block = styled.div`

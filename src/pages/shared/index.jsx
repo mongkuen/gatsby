@@ -19,3 +19,10 @@ export const Container = styled.div`
   margin-right: auto;
   max-width: 46rem;
 `;
+
+export const SmallBrand = styled.img`
+  filter: saturate(0) brightness(0.2);
+  margin: 0 auto 1rem auto;
+  height: 2rem;
+  display: block;
+`;
