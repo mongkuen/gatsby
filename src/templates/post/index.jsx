@@ -1,14 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import FadeTransition from 'src/utils/FadeTransition';
+import { Hero, WorkFooter } from 'src/pages/work/shared';
+import { media } from 'src/styles';
+
+const PostContainer = styled.div`
+  padding: 3rem 1rem;
+  max-width: 35rem;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+
+  ${media.tablet`
+    padding: 3rem 0;
+  `};
+`;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <div>
-      <h1>{post.frontmatter.title}</h1>
-      {/* eslint-disable-next-line react/no-danger */}
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
-    </div>
+    <FadeTransition>
+      <Hero
+        color={post.frontmatter.backgroundColor}
+        brand={post.frontmatter.image}
+        jobDescription={
+          <div>
+            <h4>{post.frontmatter.date}</h4>
+          </div>
+        }
+        title={post.frontmatter.title}
+        blurb={<h4>{post.frontmatter.lead}</h4>}
+      />
+      <PostContainer>
+        {/* eslint-disable-next-line react/no-danger */}
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </PostContainer>
+      <WorkFooter />
+    </FadeTransition>
   );
 };
 
@@ -32,6 +61,10 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
+        lead
+        backgroundColor
+        image
       }
     }
   }

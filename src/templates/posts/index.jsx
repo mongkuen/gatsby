@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import FadeTransition from 'src/utils/FadeTransition';
-import { WorkFooter } from 'src/pages/work/shared';
-import { Container } from 'src/pages/shared/styles';
+import { Hero, WorkFooter } from 'src/pages/work/shared';
 import { postsPathPrefix } from 'src/siteMetadata';
-import { transitionEase, media, nearBlack } from 'src/styles';
+import { transitionEase, nearWhite } from 'src/styles';
 
 const NavLink = ({ index, pageCount }) => {
   const notFirst = index !== 1;
@@ -38,37 +37,28 @@ const AllPosts = styled.div`
   a.post {
     flex-grow: 1;
     display: flex;
+
+    h2,
+    h4 {
+      ${transitionEase};
+    }
+
+    &:hover {
+      h2,
+      h4 {
+        text-shadow: 0 0 0.2rem ${nearWhite};
+        transform: scale(1.005);
+      }
+    }
+  }
+
+  .hero {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
-
-const Post = styled.div`
-  background-color: ${props => props.backgroundColor};
-  text-align: center;
-  padding: 4rem 1rem;
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  ${transitionEase};
-
-  ${media.tablet`
-    padding: 10rem 4rem;
-  `};
-
-  &:hover {
-    transform: scale(1, 1.01);
-    opacity: 0.7;
-  }
-`;
-
-const PostTitle = styled.h2``;
-
-const PostDate = styled.p`
-  color: ${nearBlack};
-  opacity: 0.4;
-`;
-
-const PostLead = styled.h4``;
 
 const Posts = ({ pathContext }) => {
   const { group, index, pageCount } = pathContext;
@@ -78,13 +68,18 @@ const Posts = ({ pathContext }) => {
       <AllPosts>
         {group.map(({ node }) => (
           <Link to={node.frontmatter.slug} className="post" key={node.id}>
-            <Post backgroundColor={node.frontmatter.backgroundColor}>
-              <Container>
-                <PostTitle>{node.frontmatter.title}</PostTitle>
-                <PostDate>Date: {node.frontmatter.date}</PostDate>
-                <PostLead>{node.frontmatter.lead}</PostLead>
-              </Container>
-            </Post>
+            <Hero
+              className="hero"
+              color={node.frontmatter.backgroundColor}
+              brand={node.frontmatter.image}
+              jobDescription={
+                <div>
+                  <h4>{node.frontmatter.date}</h4>
+                </div>
+              }
+              title={node.frontmatter.title}
+              blurb={<h4>{node.frontmatter.lead}</h4>}
+            />
           </Link>
         ))}
         <NavLink index={index} pageCount={pageCount} />

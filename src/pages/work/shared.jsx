@@ -38,6 +38,7 @@ const BlockBrand = styled.img`
   display: block;
   width: 10rem;
   margin-bottom: 2.5rem;
+  max-height: 4rem;
 `;
 
 export const SmallBrand = styled.img`
@@ -100,8 +101,15 @@ const Caption = styled.h5`
 `;
 
 /* eslint-disable object-curly-newline */
-export const Hero = ({ color, brand, jobDescription, title, blurb }) => (
-  <BlockBackground backgroundColor={color}>
+export const Hero = ({
+  color,
+  brand,
+  jobDescription,
+  title,
+  blurb,
+  className,
+}) => (
+  <BlockBackground backgroundColor={color} className={className}>
     <Block hero>
       <Container>
         <BlockBrand src={brand} />
@@ -119,6 +127,11 @@ Hero.propTypes = {
   jobDescription: PropTypes.shape({}).isRequired,
   title: PropTypes.string.isRequired,
   blurb: PropTypes.shape({}).isRequired,
+  className: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  className: '',
 };
 
 export const WorkBlock = ({
