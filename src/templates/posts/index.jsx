@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import FadeTransition from 'src/utils/FadeTransition';
-import Hero from 'src/pages/shared/Block/Hero';
+import Hero from 'src/templates/shared/Block/Hero';
 import { postsPathPrefix } from 'src/siteMetadata';
 import { transitionEase, nearWhite } from 'src/styles';
-import WorkFooter from 'src/pages/shared/WorkFooter';
+import WorkFooter from 'src/templates/shared/WorkFooter';
 
 const NavLink = ({ index, pageCount }) => {
   const notFirst = index !== 1;

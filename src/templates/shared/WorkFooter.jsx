@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
-import ContactMe from 'src/pages/shared/ContactMe';
-import { Footer, Container } from 'src/pages/shared';
+import ContactMe from 'src/templates/shared/ContactMe';
+import { Footer, Container } from 'src/templates/shared';
 import { grayMedium } from 'src/styles';
 import {
   assurity,

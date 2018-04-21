@@ -2,9 +2,9 @@ import React from 'react';
 import FadeTransition from 'src/utils/FadeTransition';
 import Link from 'gatsby-link';
 import { gray } from 'src/styles';
-import WorkFooter from 'src/pages/shared/WorkFooter';
-import { Container } from 'src/pages/shared';
-import Framed from 'src/pages/shared/Framed';
+import WorkFooter from 'src/templates/shared/WorkFooter';
+import { Container } from 'src/templates/shared';
+import Framed from 'src/templates/shared/Framed';
 import { firespring, licor, radial } from 'src/logos';
 import qaqc from 'src/images/work/licor/qaqc.gif';
 import assurityGif from 'src/images/work/firespring/assurity.gif';
@@ -17,7 +17,7 @@ import {
   InvertBrand,
   Button,
   InvertButton,
-} from 'src/pages/work/styles';
+} from 'src/templates/work/styles';
 
 export default () => (
   <FadeTransition>

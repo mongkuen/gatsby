@@ -4,10 +4,10 @@ import { radialBlue, stbaldricksGreen } from 'src/styles';
 import { radial, firespring, stbaldricks } from 'src/logos';
 import radialGif from 'src/images/work/starting/radial.gif';
 import stbaldricksPng from 'src/images/work/starting/stbaldricks.png';
-import Hero from 'src/pages/shared/Block/Hero';
-import WorkBlock from 'src/pages/shared/Block/WorkBlock';
-import { Anchor, BlurbTech } from 'src/pages/shared';
-import WorkFooter from 'src/pages/shared/WorkFooter';
+import Hero from 'src/templates/shared/Block/Hero';
+import WorkBlock from 'src/templates/shared/Block/WorkBlock';
+import { Anchor, BlurbTech } from 'src/templates/shared';
+import WorkFooter from 'src/templates/shared/WorkFooter';
 
 export default () => (
   <FadeTransition>

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Container, SmallBrand } from 'src/pages/shared';
-import Framed from 'src/pages/shared/Framed';
-import { BlockBackground, Block, BlockBlurb } from 'src/pages/shared/Block';
+import { Container, SmallBrand } from 'src/templates/shared';
+import Framed from 'src/templates/shared/Framed';
+import { BlockBackground, Block, BlockBlurb } from 'src/templates/shared/Block';
 
 const BlockLead = styled.h2`
   text-align: center;

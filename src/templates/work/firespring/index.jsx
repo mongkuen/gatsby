@@ -1,7 +1,7 @@
 import React from 'react';
 import FadeTransition from 'src/utils/FadeTransition';
-import { Anchor, SmallBrand, BlurbTech } from 'src/pages/shared';
-import WorkFooter from 'src/pages/shared/WorkFooter';
+import { Anchor, SmallBrand, BlurbTech } from 'src/templates/shared';
+import WorkFooter from 'src/templates/shared/WorkFooter';
 import { gray, fsOrange } from 'src/styles';
 import {
   assurity,
@@ -17,8 +17,8 @@ import assurityGif from 'src/images/work/firespring/assurity.gif';
 import kohlerGif from 'src/images/work/firespring/kohler.gif';
 import slgreenPng from 'src/images/work/firespring/slgreen.png';
 import yoganonymousGif from 'src/images/work/firespring/yoganonymous.gif';
-import Hero from 'src/pages/shared/Block/Hero';
-import WorkBlock from 'src/pages/shared/Block/WorkBlock';
+import Hero from 'src/templates/shared/Block/Hero';
+import WorkBlock from 'src/templates/shared/Block/WorkBlock';
 
 export default () => (
   <FadeTransition>
