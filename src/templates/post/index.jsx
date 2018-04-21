@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import FadeTransition from 'src/utils/FadeTransition';
 import { Hero, WorkFooter } from 'src/pages/work/shared';
-import { media } from 'src/styles';
+import { media, transitionEase } from 'src/styles';
 
 const PostContainer = styled.div`
   padding: 3rem 1rem;
@@ -15,6 +15,15 @@ const PostContainer = styled.div`
   ${media.tablet`
     padding: 3rem 0;
   `};
+
+  a {
+    text-decoration: underline;
+    ${transitionEase};
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 `;
 
 const Post = ({ data }) => {

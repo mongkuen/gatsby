@@ -47,7 +47,7 @@ const Index = ({ pathContext }) => (
           <Intro>
             <IntroSub>Latest Work:</IntroSub>
             <Link to="/work/licor">
-              <IntroHead>Tovi (Alexandria Project)</IntroHead>
+              <IntroHead>LI-COR: Tovi Data Analysis</IntroHead>
             </Link>
           </Intro>
         </IntroWrapper>

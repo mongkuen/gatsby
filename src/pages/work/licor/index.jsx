@@ -32,7 +32,7 @@ export default () => (
     />
     <WorkBlock
       smallBrand={tovi}
-      blockLead="Software Development"
+      blockLead="Tovi: Software Development"
       blockBlurb={
         <div>
           <h4>
