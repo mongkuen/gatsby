@@ -3,6 +3,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 76em) {
   html {
     font-size: 20px;
