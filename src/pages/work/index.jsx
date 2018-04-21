@@ -3,7 +3,7 @@ import FadeTransition from 'src/utils/FadeTransition';
 import Link from 'gatsby-link';
 import { gray } from 'src/styles';
 import { WorkFooter } from 'src/pages/work/shared';
-import { Container } from 'src/pages/shared/styles';
+import { Container } from 'src/pages/shared';
 import { firespring, licor, radial } from 'src/logos';
 import qaqc from 'src/images/work/licor/qaqc.gif';
 import assurityGif from 'src/images/work/firespring/assurity.gif';

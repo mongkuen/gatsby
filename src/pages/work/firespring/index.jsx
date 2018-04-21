@@ -1,6 +1,6 @@
 import React from 'react';
 import FadeTransition from 'src/utils/FadeTransition';
-import { Anchor } from 'src/pages/shared/styles';
+import { Anchor } from 'src/pages/shared';
 import { gray, fsOrange } from 'src/styles';
 import {
   assurity,

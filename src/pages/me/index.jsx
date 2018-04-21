@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'gatsby-link';
 import FadeTransition from 'src/utils/FadeTransition';
 import { gray } from 'src/styles';
-import { ContactMe } from 'src/pages/shared';
-import { Footer } from 'src/pages/shared/styles';
+import { Footer } from 'src/pages/shared';
+import ContactMe from 'src/pages/shared/ContactMe';
 import {
   ProfilePicture,
   IntroWrapper,

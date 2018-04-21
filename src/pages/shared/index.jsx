@@ -1,30 +1,21 @@
-import React from 'react';
-import LinkedIn from 'src/images/iconLinkedIn.png';
-import Instagram from 'src/images/iconInstagram.png';
-import { Contact, Social } from './styles';
+import styled from 'styled-components';
+import { media, grayDark } from 'src/styles';
 
-/* eslint-disable import/prefer-default-export */
-export const ContactMe = () => (
-  <Contact>
-    <h4>I{"'"}d &hearts; to hear from you</h4>
-    <p>
-      <a href="mailto:mongkuen.sun@gmail.com">mongkuen.sun@gmail.com</a>
-    </p>
-    <Social>
-      <a
-        href="https://www.linkedin.com/in/mongkuensun/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={LinkedIn} alt="Linked In" />
-      </a>
-      <a
-        href="https://www.instagram.com/mongkuen/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src={Instagram} alt="Instagram" />
-      </a>
-    </Social>
-  </Contact>
-);
+export const Anchor = styled.span`
+  position: absolute;
+  margin-top: -4rem;
+
+  ${media.tablet`
+    margin-top: initial;
+  `};
+`;
+
+export const Footer = styled.div`
+  background-color: ${grayDark};
+`;
+
+export const Container = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 46rem;
+`;

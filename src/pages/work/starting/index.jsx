@@ -5,7 +5,7 @@ import { radial, firespring, stbaldricks } from 'src/logos';
 import radialGif from 'src/images/work/starting/radial.gif';
 import stbaldricksPng from 'src/images/work/starting/stbaldricks.png';
 import { Hero, WorkBlock, BlurbTech, WorkFooter } from 'src/pages/work/shared';
-import { Anchor } from 'src/pages/shared/styles';
+import { Anchor } from 'src/pages/shared';
 
 export default () => (
   <FadeTransition>
