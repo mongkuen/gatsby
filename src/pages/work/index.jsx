@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import { gray } from 'src/styles';
 import { WorkFooter } from 'src/pages/work/shared';
 import { Container } from 'src/pages/shared';
+import Framed from 'src/pages/shared/Framed';
 import { firespring, licor, radial } from 'src/logos';
 import qaqc from 'src/images/work/licor/qaqc.gif';
 import assurityGif from 'src/images/work/firespring/assurity.gif';
@@ -16,8 +17,6 @@ import {
   InvertBrand,
   Button,
   InvertButton,
-  Frame,
-  FrameItem,
 } from 'src/pages/work/styles';
 
 export default () => (
@@ -41,8 +40,7 @@ export default () => (
           <Button>See LI-COR</Button>
         </Link>
       </Container>
-      <Frame />
-      <FrameItem src={qaqc} alt="Tovi" />
+      <Framed backgroundColor={gray} src={qaqc} alt="Tovi" />
     </Block>
     <Block>
       <Container>
@@ -63,8 +61,7 @@ export default () => (
           <InvertButton>See Firespring</InvertButton>
         </Link>
       </Container>
-      <Frame />
-      <FrameItem src={assurityGif} alt="Tovi" />
+      <Framed src={assurityGif} alt="Assurity" />
     </Block>
     <Block backgroundColor={gray}>
       <Container>
@@ -85,8 +82,7 @@ export default () => (
           <Button>See how I started</Button>
         </Link>
       </Container>
-      <Frame />
-      <FrameItem src={radialGif} alt="Tovi" />
+      <Framed backgroundColor={gray} src={radialGif} alt="Radial" />
     </Block>
     <WorkFooter />
   </FadeTransition>

@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import { media, lightGray, nearWhite } from 'src/styles';
+import { media, lightGray, grayMedium, nearWhite } from 'src/styles';
 import { Footer, Container, SmallBrand } from 'src/pages/shared';
+import Framed from 'src/pages/shared/Framed';
 import ContactMe from 'src/pages/shared/ContactMe';
 import {
   assurity,
@@ -18,15 +19,31 @@ import {
   tovi,
   yoganonymous,
 } from 'src/logos';
-import {
-  Brands,
-  BrandWrapper,
-  ByLine,
-  BrandSmall,
-  Frame,
-  FrameItem,
-  FrameWrapper,
-} from 'src/pages/work/styles';
+
+const Brands = styled.div`
+  text-align: center;
+`;
+
+const BrandWrapper = styled.div`
+  padding: 0 2rem 0 2rem;
+`;
+
+const ByLine = styled.h5`
+  color: ${grayMedium};
+  padding-top: 3rem;
+  margin-bottom: 1rem;
+`;
+
+const BrandSmall = styled.img`
+  filter: saturate(0) brightness(10);
+  height: 1.5rem;
+  margin: 0, 5rem;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+`;
 
 const BlockBackground = styled.div`
   background-color: ${props => props.backgroundColor};
@@ -141,10 +158,7 @@ export const WorkBlock = ({
       </Container>
     </Block>
     <Caption>{caption}</Caption>
-    <FrameWrapper>
-      <Frame />
-      <FrameItem src={src} alt={alt} />
-    </FrameWrapper>
+    <Framed src={src} alt={alt} />
   </BlockBackground>
 );
 
