@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import FadeTransition from 'src/utils/FadeTransition';
-import { Hero } from 'src/pages/work/shared';
+import Hero from 'src/pages/shared/Block/Hero';
 import { media, transitionEase } from 'src/styles';
 import WorkFooter from 'src/pages/shared/WorkFooter';
 

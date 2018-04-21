@@ -17,7 +17,8 @@ import assurityGif from 'src/images/work/firespring/assurity.gif';
 import kohlerGif from 'src/images/work/firespring/kohler.gif';
 import slgreenPng from 'src/images/work/firespring/slgreen.png';
 import yoganonymousGif from 'src/images/work/firespring/yoganonymous.gif';
-import { Hero, WorkBlock } from 'src/pages/work/shared';
+import Hero from 'src/pages/shared/Block/Hero';
+import WorkBlock from 'src/pages/shared/Block/WorkBlock';
 
 export default () => (
   <FadeTransition>

@@ -5,7 +5,8 @@ import { licor, tovi } from 'src/logos';
 import fingerprint from 'src/images/work/licor/fingerprints.gif';
 import qaqc from 'src/images/work/licor/qaqc.gif';
 import scatter from 'src/images/work/licor/scatter.gif';
-import { Hero, WorkBlock } from 'src/pages/work/shared';
+import Hero from 'src/pages/shared/Block/Hero';
+import WorkBlock from 'src/pages/shared/Block/WorkBlock';
 import { Anchor, BlurbTech } from 'src/pages/shared';
 import WorkFooter from 'src/pages/shared/WorkFooter';
 
