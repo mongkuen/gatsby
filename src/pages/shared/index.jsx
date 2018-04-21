@@ -26,3 +26,7 @@ export const SmallBrand = styled.img`
   height: 2rem;
   display: block;
 `;
+
+export const BlurbTech = styled.h4`
+  font-weight: 700;
+`;

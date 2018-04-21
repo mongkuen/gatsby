@@ -78,10 +78,6 @@ const BlockBlurb = styled.div`
   }
 `;
 
-export const BlurbTech = styled.h4`
-  font-weight: 700;
-`;
-
 const BlockLead = styled.h2`
   text-align: center;
 `;
