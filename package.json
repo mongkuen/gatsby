@@ -30,6 +30,7 @@
   "dependencies": {
     "gatsby-link": "^1.6.40",
     "gatsby-paginate": "^1.0.14",
+    "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-typography": "^1.7.18",
     "history": "^4.7.2",
     "prismjs": "^1.13.0",

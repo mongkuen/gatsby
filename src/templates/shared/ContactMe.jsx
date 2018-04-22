@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import LinkedIn from 'src/images/icons/LinkedIn.png';
 import Instagram from 'src/images/icons/Instagram.png';
 import Github from 'src/images/icons/Github.svg';
@@ -49,27 +50,27 @@ export default () => (
       <a href="mailto:mongkuen.sun@gmail.com">mongkuen.sun@gmail.com</a>
     </p>
     <Social>
-      <a
+      <OutboundLink
         href="https://www.linkedin.com/in/mongkuensun/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img src={LinkedIn} alt="Linked In" />
-      </a>
-      <a
+      </OutboundLink>
+      <OutboundLink
         href="https://www.instagram.com/mongkuen/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img src={Instagram} alt="Instagram" />
-      </a>
-      <a
+      </OutboundLink>
+      <OutboundLink
         href="https://github.com/mongkuen/"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img src={Github} alt="Github" />
-      </a>
+      </OutboundLink>
     </Social>
   </Contact>
 );
