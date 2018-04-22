@@ -9,6 +9,7 @@ import {
   Header,
   HeadingWrapper,
   Heading,
+  Pusher,
 } from 'src/layouts/styles';
 
 require('prismjs/themes/prism-tomorrow.css');
@@ -29,6 +30,7 @@ HeadingLink.propTypes = {
 const BaseLayout = ({ children, location }) => (
   <Main>
     <FaviconHelmet />
+    <Pusher />
     <Header wide={location.pathname !== '/' && location.pathname !== '/me'}>
       <Link to="/">
         <SunWrapper>

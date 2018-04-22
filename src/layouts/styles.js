@@ -48,6 +48,15 @@ export const Heading = styled.div`
   `};
 `;
 
+export const Pusher = styled.div`
+  height: 4rem;
+  ${transitionEase};
+
+  ${media.tablet`
+    height: initial;
+  `};
+`;
+
 export const Header = styled.div`
   display: inline-block;
   width: 100%;
@@ -56,7 +65,7 @@ export const Header = styled.div`
   font-size: 0.75rem;
   padding: 1rem;
   background-color: ${themeBrandColor};
-  position: sticky;
+  position: fixed;
   top: 0;
   box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
   z-index: 3;
