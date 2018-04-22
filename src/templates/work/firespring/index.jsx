@@ -1,8 +1,11 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import FadeTransition from 'src/utils/FadeTransition';
-import { Anchor, SmallBrand, BlurbTech } from 'src/templates/shared';
+import Hero from 'src/templates/shared/Block/Hero';
+import WorkBlock from 'src/templates/shared/Block/WorkBlock';
 import WorkFooter from 'src/templates/shared/WorkFooter';
-import { gray, fsOrange } from 'src/styles';
+import { Anchor, SmallBrand, BlurbTech } from 'src/templates/shared';
+import { siteName } from 'src/siteMetadata';
 import {
   assurity,
   firespring,
@@ -12,16 +15,20 @@ import {
   oxford,
   yoganonymous,
 } from 'src/logos';
-import gordmansGif from 'src/images/work/firespring/gordmans.gif';
-import assurityGif from 'src/images/work/firespring/assurity.gif';
-import kohlerGif from 'src/images/work/firespring/kohler.gif';
-import slgreenPng from 'src/images/work/firespring/slgreen.png';
-import yoganonymousGif from 'src/images/work/firespring/yoganonymous.gif';
-import Hero from 'src/templates/shared/Block/Hero';
-import WorkBlock from 'src/templates/shared/Block/WorkBlock';
+import {
+  gordmansGif,
+  assurityGif,
+  kohlerGif,
+  slgreenPng,
+  yoganonymousGif,
+} from 'src/templates/work/images';
+import { gray, fsOrange } from 'src/styles';
 
 export default () => (
   <FadeTransition>
+    <Helmet>
+      <title>Firespring | {siteName}</title>
+    </Helmet>
     <Anchor id="firespring" />
     <Hero
       color={fsOrange}

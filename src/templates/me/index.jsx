@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 import FadeTransition from 'src/utils/FadeTransition';
-import { gray } from 'src/styles';
-import { Footer } from 'src/templates/shared';
 import ContactMe from 'src/templates/shared/ContactMe';
+import { Footer } from 'src/templates/shared';
+import { siteName } from 'src/siteMetadata';
+import { gray } from 'src/styles';
 import {
   ProfilePicture,
   IntroWrapper,
@@ -18,6 +20,9 @@ import {
 
 export default () => (
   <FadeTransition>
+    <Helmet>
+      <title>About Me | {siteName}</title>
+    </Helmet>
     <ProfileWrapper>
       <Half>
         <IntroWrapper background={gray} tabletHeight="100vh">

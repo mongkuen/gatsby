@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import LinkedIn from 'src/images/iconLinkedIn.png';
-import Instagram from 'src/images/iconInstagram.png';
+import LinkedIn from 'src/images/icons/LinkedIn.png';
+import Instagram from 'src/images/icons/Instagram.png';
+import Github from 'src/images/icons/Github.svg';
 import { transitionEase, grayMedium, nearWhite } from 'src/styles';
 
 const Contact = styled.div`
@@ -61,6 +62,13 @@ export default () => (
         rel="noopener noreferrer"
       >
         <img src={Instagram} alt="Instagram" />
+      </a>
+      <a
+        href="https://github.com/mongkuen/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={Github} alt="Github" />
       </a>
     </Social>
   </Contact>

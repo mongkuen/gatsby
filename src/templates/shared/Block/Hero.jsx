@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Container } from 'src/templates/shared';
-import { lightGray, nearWhite } from 'src/styles';
 import { BlockBackground, Block, BlockBlurb } from 'src/templates/shared/Block';
+import { lightGray, nearWhite } from 'src/styles';
 
 const BlockBrand = styled.img`
   filter: saturate(0) brightness(10);

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { media, transitionEase, rotate360, nearBlack } from 'src/styles';
 import { themeBrandColor } from 'src/siteMetadata';
 import sun from 'src/images/sun.svg';
+import { media, transitionEase, rotate360, nearBlack } from 'src/styles';
 
 export const Main = styled.main``;
 

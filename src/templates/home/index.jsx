@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import FadeTransition from 'src/utils/FadeTransition';
+import { profile, licor, js } from 'src/templates/home/backgrounds';
 import {
   red,
   redDark,
@@ -22,9 +23,6 @@ import {
   IntroWrapper,
   Caret,
 } from 'src/templates/home/styles';
-import profile from 'src/images/profile.png';
-import licor from 'src/images/licor.png';
-import js from 'src/images/js.png';
 
 const Index = ({ pathContext }) => (
   <FadeTransition>

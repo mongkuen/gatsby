@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import FadeTransition from 'src/utils/FadeTransition';
 import Hero from 'src/templates/shared/Block/Hero';
-import { media, transitionEase } from 'src/styles';
 import WorkFooter from 'src/templates/shared/WorkFooter';
+import { siteName } from 'src/siteMetadata';
+import { media, transitionEase } from 'src/styles';
 
 const PostContainer = styled.div`
   padding: 3rem 1rem;
@@ -31,6 +33,11 @@ const Post = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <FadeTransition>
+      <Helmet>
+        <title>
+          {post.frontmatter.title} | {siteName}
+        </title>
+      </Helmet>
       <Hero
         color={post.frontmatter.backgroundColor}
         brand={post.frontmatter.image}

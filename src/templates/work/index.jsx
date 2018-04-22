@@ -1,14 +1,14 @@
 import React from 'react';
-import FadeTransition from 'src/utils/FadeTransition';
 import Link from 'gatsby-link';
-import { gray } from 'src/styles';
+import Helmet from 'react-helmet';
+import FadeTransition from 'src/utils/FadeTransition';
+import Framed from 'src/templates/shared/Framed';
 import WorkFooter from 'src/templates/shared/WorkFooter';
 import { Container } from 'src/templates/shared';
-import Framed from 'src/templates/shared/Framed';
+import { siteName } from 'src/siteMetadata';
 import { firespring, licor, radial } from 'src/logos';
-import qaqc from 'src/images/work/licor/qaqc.gif';
-import assurityGif from 'src/images/work/firespring/assurity.gif';
-import radialGif from 'src/images/work/starting/radial.gif';
+import { qaqc, assurityGif, radialGif } from 'src/templates/work/images';
+import { gray } from 'src/styles';
 import {
   Block,
   Description,
@@ -21,6 +21,9 @@ import {
 
 export default () => (
   <FadeTransition>
+    <Helmet>
+      <title>Work | {siteName}</title>
+    </Helmet>
     <Block backgroundColor={gray}>
       <Container>
         <Brand src={licor} />

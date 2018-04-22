@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Link from 'gatsby-link';
 import ContactMe from 'src/templates/shared/ContactMe';
 import { Footer, Container } from 'src/templates/shared';
-import { grayMedium } from 'src/styles';
 import {
   assurity,
   firespring,
@@ -17,6 +16,7 @@ import {
   tovi,
   yoganonymous,
 } from 'src/logos';
+import { grayMedium } from 'src/styles';
 
 const Brands = styled.div`
   text-align: center;

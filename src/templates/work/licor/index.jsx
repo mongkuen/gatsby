@@ -1,17 +1,20 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import FadeTransition from 'src/utils/FadeTransition';
-import { gray, licorBlue } from 'src/styles';
-import { licor, tovi } from 'src/logos';
-import fingerprint from 'src/images/work/licor/fingerprints.gif';
-import qaqc from 'src/images/work/licor/qaqc.gif';
-import scatter from 'src/images/work/licor/scatter.gif';
 import Hero from 'src/templates/shared/Block/Hero';
 import WorkBlock from 'src/templates/shared/Block/WorkBlock';
-import { Anchor, BlurbTech } from 'src/templates/shared';
 import WorkFooter from 'src/templates/shared/WorkFooter';
+import { Anchor, BlurbTech } from 'src/templates/shared';
+import { siteName } from 'src/siteMetadata';
+import { licor, tovi } from 'src/logos';
+import { fingerprint, qaqc, scatter } from 'src/templates/work/images';
+import { gray, licorBlue } from 'src/styles';
 
 export default () => (
   <FadeTransition>
+    <Helmet>
+      <title>LI-COR | {siteName}</title>
+    </Helmet>
     <Anchor id="licor" />
     <Hero
       color={licorBlue}

@@ -1,16 +1,20 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import FadeTransition from 'src/utils/FadeTransition';
-import { radialBlue, stbaldricksGreen } from 'src/styles';
-import { radial, firespring, stbaldricks } from 'src/logos';
-import radialGif from 'src/images/work/starting/radial.gif';
-import stbaldricksPng from 'src/images/work/starting/stbaldricks.png';
 import Hero from 'src/templates/shared/Block/Hero';
 import WorkBlock from 'src/templates/shared/Block/WorkBlock';
-import { Anchor, BlurbTech } from 'src/templates/shared';
 import WorkFooter from 'src/templates/shared/WorkFooter';
+import { Anchor, BlurbTech } from 'src/templates/shared';
+import { siteName } from 'src/siteMetadata';
+import { radial, firespring, stbaldricks } from 'src/logos';
+import { radialGif, stbaldricksPng } from 'src/templates/work/images';
+import { radialBlue, stbaldricksGreen } from 'src/styles';
 
 export default () => (
   <FadeTransition>
+    <Helmet>
+      <title>Starting Out | {siteName}</title>
+    </Helmet>
     <Anchor id="radial" />
     <Hero
       color={radialBlue}

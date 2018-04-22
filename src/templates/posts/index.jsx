@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import Helmet from 'react-helmet';
 import FadeTransition from 'src/utils/FadeTransition';
 import Hero from 'src/templates/shared/Block/Hero';
-import { postsPathPrefix } from 'src/siteMetadata';
-import { transitionEase, nearWhite } from 'src/styles';
 import WorkFooter from 'src/templates/shared/WorkFooter';
+import { postsPathPrefix, siteName } from 'src/siteMetadata';
+import { transitionEase, nearWhite } from 'src/styles';
 
 const NavLink = ({ index, pageCount }) => {
   const notFirst = index !== 1;
@@ -66,6 +67,9 @@ const Posts = ({ pathContext }) => {
 
   return (
     <FadeTransition>
+      <Helmet>
+        <title>Blog | {siteName}</title>
+      </Helmet>
       <AllPosts>
         {group.map(({ node }) => (
           <Link to={node.frontmatter.slug} className="post" key={node.id}>
