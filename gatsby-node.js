@@ -62,13 +62,6 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
 };
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
-  if (stage === 'develop') {
-    config.loader('js|jsx', {
-      test: /\.js$|\.jsx$/,
-      exclude: /(node_modules|cache)/,
-      loader: 'eslint-loader',
-    });
-  }
   config.merge({
     resolve: {
       alias: {

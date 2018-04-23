@@ -18,6 +18,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.4.0",
     "gatsby": "^1.9.246",
+    "gatsby-plugin-eslint": "^1.0.2",
     "gatsby-plugin-manifest": "^1.0.18",
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-remark-prismjs": "^1.2.24",

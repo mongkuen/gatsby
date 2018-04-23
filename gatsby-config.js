@@ -4,6 +4,7 @@ const siteMetadata = require('./src/siteMetadata');
 module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-plugin-typography',
       options: {

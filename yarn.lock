@@ -3824,6 +3824,10 @@ gatsby-paginate@^1.0.14:
   dependencies:
     path "^0.12.7"
 
+gatsby-plugin-eslint@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-eslint/-/gatsby-plugin-eslint-1.0.2.tgz#40b24351febaf4b9b0364fd1bdf6f366f8f4160b"
+
 gatsby-plugin-google-analytics@^1.0.31:
   version "1.0.31"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.31.tgz#eaf16e1809461b10badf12c05038c429745783c0"
