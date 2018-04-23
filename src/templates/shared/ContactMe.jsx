@@ -4,6 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import LinkedIn from 'src/images/icons/LinkedIn.png';
 import Instagram from 'src/images/icons/Instagram.png';
 import Github from 'src/images/icons/Github.svg';
+import npm from 'src/images/icons/npm.png';
 import { transitionEase, grayMedium, nearWhite } from 'src/styles';
 
 const Contact = styled.div`
@@ -70,6 +71,13 @@ export default () => (
         rel="noopener noreferrer"
       >
         <img src={Github} alt="Github" />
+      </OutboundLink>
+      <OutboundLink
+        href="https://www.npmjs.com/~mongkuen"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src={npm} alt="npm" />
       </OutboundLink>
     </Social>
   </Contact>
