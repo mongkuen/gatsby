@@ -15,6 +15,7 @@ module.exports = {
       webpack: {
         config: {
           resolve: {
+            extensions: ['', '.js', '.jsx'],
             root: __dirname,
           },
         },
