@@ -64,9 +64,7 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
 exports.modifyWebpackConfig = ({ config, stage }) => {
   config.merge({
     resolve: {
-      alias: {
-        src: path.join(__dirname, 'src'),
-      },
+      root: __dirname,
     },
   });
   return config;
