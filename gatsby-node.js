@@ -60,12 +60,3 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
     });
   });
 };
-
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  config.merge({
-    resolve: {
-      root: __dirname,
-    },
-  });
-  return config;
-};

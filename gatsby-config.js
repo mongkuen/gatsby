@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
     'gatsby-plugin-eslint',
+    'gatsby-plugin-root-import',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
