@@ -1,3 +1,6 @@
+# Local Dev Plugins
+/plugins
+
 # Logs
 logs
 *.log
