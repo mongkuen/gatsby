@@ -9,7 +9,7 @@ const BlockBrand = styled.img`
   filter: saturate(0) brightness(10);
   margin: 0 auto;
   display: block;
-  width: 10rem;
+  max-width: 10rem;
   margin-bottom: 2.5rem;
   max-height: 4rem;
 `;
