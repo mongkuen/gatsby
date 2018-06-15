@@ -14,6 +14,7 @@ image: "/posts/code.png"
 
 ### Big-O
 - **Best-case:** `O(n)`
+- **Average-case** `O(n^2)`
 - **Worst-case:** `O(n^2)`
 
 ```javascript
@@ -47,6 +48,7 @@ function bubbleSort (items) {
 
 ### Big-O
 - **Best-case:** `O(n)`
+- **Average-case** `O(n^2)`
 - **Worst-case:** `O(n^2)`
 
 ```javascript
@@ -79,6 +81,7 @@ function insertionSort (items) {
 
 ### Big-O
 - **Best-case:** `O(n log(n))`
+- **Average-case** `O(n log(n))`
 - **Worst-case:** `O(n log(n))`
 
 ```javascript
@@ -113,6 +116,11 @@ function mergeSort (items) {
 3. Recursively call `quickSort` on smaller and smaller pivoted lists until they're a sorted list of 1 element.
 4. Concat smaller items to the left of the pivot, larger items to the right of the pivot.
 5. Bubble back up, concatenating larger and larger lists.
+
+### Big-O
+- **Best-case** `O(n log(n))`
+- **Average-case** `O(n log(n))`
+- **Worst-case:** `O (n^2)`
 
 ```javascript
 function quickSort (arr) {
