@@ -14,7 +14,7 @@ image: "/posts/code.png"
 
 ### Big-O
 - **Best-case:** `O(n)`
-- **Average-case** `O(n^2)`
+- **Average-case:** `O(n^2)`
 - **Worst-case:** `O(n^2)`
 
 ```javascript
@@ -48,7 +48,7 @@ function bubbleSort (items) {
 
 ### Big-O
 - **Best-case:** `O(n)`
-- **Average-case** `O(n^2)`
+- **Average-case:** `O(n^2)`
 - **Worst-case:** `O(n^2)`
 
 ```javascript
@@ -81,7 +81,7 @@ function insertionSort (items) {
 
 ### Big-O
 - **Best-case:** `O(n log(n))`
-- **Average-case** `O(n log(n))`
+- **Average-case:** `O(n log(n))`
 - **Worst-case:** `O(n log(n))`
 
 ```javascript
@@ -118,8 +118,8 @@ function mergeSort (items) {
 5. Bubble back up, concatenating larger and larger lists.
 
 ### Big-O
-- **Best-case** `O(n log(n))`
-- **Average-case** `O(n log(n))`
+- **Best-case:** `O(n log(n))`
+- **Average-case:** `O(n log(n))`
 - **Worst-case:** `O (n^2)`
 
 ```javascript

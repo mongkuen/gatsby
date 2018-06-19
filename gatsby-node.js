@@ -35,7 +35,7 @@ exports.createPages = ({ graphql, getNode, boundActionCreators }) => {
         createPage,
         pageTemplate: './src/templates/posts/index.jsx',
         pathPrefix: siteMetadata.postsPathPrefix,
-        pageLength: 2,
+        pageLength: 10,
       });
 
       markdownNodes.forEach(node => {
