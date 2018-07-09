@@ -3862,9 +3862,9 @@ gatsby-plugin-manifest@^1.0.18:
     bluebird "^3.5.0"
     sharp "^0.20.1"
 
-gatsby-plugin-page-transitions@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-transitions/-/gatsby-plugin-page-transitions-1.0.1.tgz#780b38f7cec4c6a6f7a95ff6470b20dd38f2fdc3"
+gatsby-plugin-page-transitions@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-transitions/-/gatsby-plugin-page-transitions-1.0.4.tgz#ff8f8db74d72ab6a07f547190b989a4c60e5a7c9"
   dependencies:
     history "^4.7.2"
     prop-types "^15.6.2"
