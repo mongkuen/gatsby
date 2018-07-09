@@ -7,7 +7,11 @@ backgroundColor: "#7f562c"
 image: "/posts/plugin.png"
 ---
 
-I created functionality to add page transitions to Gatsby pages:
+I created functionality to add page transitions to Gatsby pages, letting you mix and match any transitions desired:
+
+<div style="display: flex; justify-content: center;">
+  <img src="/posts/transition.gif" alt="gatsby-plugin-page-transition demo">
+</div>
 
 The general implementation is as follows:
 1. Create a new browser history in the client that we can control. This can be done in the `gatsby-browser.js` client file
