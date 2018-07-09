@@ -171,7 +171,7 @@ Since there is a build system, and you do not want to commit compiled code into 
 Depending on what type of files your plugin utilizes, you may have to ignore `gatsby-node.js`, `gatsby-browser.js`, `gatsby-ssr.js`, `index.js`, all 3, or more.
 In my case I only have to build and ignore `gatsby-browser.js` and `index.js`
 
-Note that if the parent Gatsby project is tracking changes vit git, you'll want to ignore the local dev plugin folder in the parent project.
+Note that if the parent Gatsby project is tracking changes via git, you'll want to ignore the local dev plugin folder in the parent project.
 
 1. Initialize git inside plugin folder `plugins/gatsby-plugin-page-transitions/`
 2. Create `plugins/gatsby-plugin-page-transitions/.gitignore` file
@@ -347,7 +347,8 @@ node_modules
 src
 ```
 
-2. Make NPM publish a fresh build right before publishing with the `prepublishOnly` hook
+2. Make NPM publish a fresh build right before publishing with the `prepublishOnly` hook.
+
 Note there were naming/deprecation issues with `prepublish` vs `prepublishOnly`, more reading [here](https://iamakulov.com/notes/npm-4-prepublish/).
 However for most expected behavior of hooking in before publishing, use `prepublishOnly`
 
