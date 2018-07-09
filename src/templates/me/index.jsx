@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import FadeTransition from 'src/utils/FadeTransition';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import ContactMe from 'src/templates/shared/ContactMe';
 import { Footer } from 'src/templates/shared';
 import { siteName } from 'src/siteMetadata';
@@ -19,7 +19,7 @@ import {
 } from 'src/templates/me/styles';
 
 export default () => (
-  <FadeTransition>
+  <PageTransition>
     <Helmet>
       <title>About Me | {siteName}</title>
     </Helmet>
@@ -62,5 +62,5 @@ export default () => (
         </Footer>
       </Half>
     </ProfileWrapper>
-  </FadeTransition>
+  </PageTransition>
 );

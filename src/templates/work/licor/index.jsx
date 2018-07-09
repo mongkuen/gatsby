@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import FadeTransition from 'src/utils/FadeTransition';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import Hero from 'src/templates/shared/Block/Hero';
 import WorkBlock from 'src/templates/shared/Block/WorkBlock';
 import WorkFooter from 'src/templates/shared/WorkFooter';
@@ -11,7 +11,7 @@ import { fingerprint, qaqc, scatter } from 'src/templates/work/images';
 import { gray, licorBlue } from 'src/styles';
 
 export default () => (
-  <FadeTransition>
+  <PageTransition>
     <Helmet>
       <title>LI-COR | {siteName}</title>
     </Helmet>
@@ -111,5 +111,5 @@ export default () => (
       alt="Tovi scatter plotting"
     />
     <WorkFooter />
-  </FadeTransition>
+  </PageTransition>
 );

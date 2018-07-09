@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import FadeTransition from 'src/utils/FadeTransition';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import { profile, licor, js } from 'src/templates/home/backgrounds';
 import {
   red,
@@ -25,7 +25,7 @@ import {
 } from 'src/templates/home/styles';
 
 const Index = ({ pathContext }) => (
-  <FadeTransition>
+  <PageTransition>
     <BlockGroup borderColor={blue}>
       <Link to="/work" style={{ width: '50%' }}>
         <PictureBlock
@@ -102,7 +102,7 @@ const Index = ({ pathContext }) => (
         </IntroWrapper>
       </HalfBlock>
     </BlockGroup>
-  </FadeTransition>
+  </PageTransition>
 );
 
 Index.propTypes = {

@@ -6,6 +6,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-eslint',
     'gatsby-plugin-root-import',
+    'gatsby-plugin-page-transitions',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -55,9 +56,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: "UA-56174221-2",
+        trackingId: 'UA-56174221-2',
         head: true,
-      }
+      },
     },
   ],
 };

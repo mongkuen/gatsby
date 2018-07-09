@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
-import FadeTransition from 'src/utils/FadeTransition';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import Hero from 'src/templates/shared/Block/Hero';
 import WorkFooter from 'src/templates/shared/WorkFooter';
 import { siteName } from 'src/siteMetadata';
@@ -32,7 +32,7 @@ const PostContainer = styled.div`
 const Post = ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <FadeTransition>
+    <PageTransition>
       <Helmet>
         <title>
           {post.frontmatter.title} | {siteName}
@@ -54,7 +54,7 @@ const Post = ({ data }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </PostContainer>
       <WorkFooter />
-    </FadeTransition>
+    </PageTransition>
   );
 };
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
-import FadeTransition from 'src/utils/FadeTransition';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import Hero from 'src/templates/shared/Block/Hero';
 import WorkFooter from 'src/templates/shared/WorkFooter';
 import { postsPathPrefix, siteName } from 'src/siteMetadata';
@@ -66,7 +66,7 @@ const Posts = ({ pathContext }) => {
   const { group, index, pageCount } = pathContext;
 
   return (
-    <FadeTransition>
+    <PageTransition>
       <Helmet>
         <title>Blog | {siteName}</title>
       </Helmet>
@@ -90,7 +90,7 @@ const Posts = ({ pathContext }) => {
         <NavLink index={index} pageCount={pageCount} />
         <WorkFooter />
       </AllPosts>
-    </FadeTransition>
+    </PageTransition>
   );
 };
 

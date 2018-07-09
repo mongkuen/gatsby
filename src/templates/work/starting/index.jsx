@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import FadeTransition from 'src/utils/FadeTransition';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import Hero from 'src/templates/shared/Block/Hero';
 import WorkBlock from 'src/templates/shared/Block/WorkBlock';
 import WorkFooter from 'src/templates/shared/WorkFooter';
@@ -11,7 +11,7 @@ import { radialGif, stbaldricksPng } from 'src/templates/work/images';
 import { radialBlue, stbaldricksGreen } from 'src/styles';
 
 export default () => (
-  <FadeTransition>
+  <PageTransition>
     <Helmet>
       <title>Starting Out | {siteName}</title>
     </Helmet>
@@ -105,5 +105,5 @@ export default () => (
       alt="St. Baldrick's website"
     />
     <WorkFooter />
-  </FadeTransition>
+  </PageTransition>
 );

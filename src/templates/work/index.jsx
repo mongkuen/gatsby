@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import FadeTransition from 'src/utils/FadeTransition';
+import PageTransition from 'gatsby-plugin-page-transitions';
 import Framed from 'src/templates/shared/Framed';
 import WorkFooter from 'src/templates/shared/WorkFooter';
 import { Container } from 'src/templates/shared';
@@ -20,7 +20,7 @@ import {
 } from 'src/templates/work/styles';
 
 export default () => (
-  <FadeTransition>
+  <PageTransition>
     <Helmet>
       <title>Work | {siteName}</title>
     </Helmet>
@@ -88,5 +88,5 @@ export default () => (
       <Framed backgroundColor={gray} src={radialGif} alt="Radial" />
     </Block>
     <WorkFooter />
-  </FadeTransition>
+  </PageTransition>
 );
